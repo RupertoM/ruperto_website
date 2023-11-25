@@ -10,7 +10,7 @@ const navigation = [
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-tl from-black via-zinc-600/20 to-black">
+    <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-bl from-black via-slate-500/25 to-black">
       <nav className="my-8">
         <ul className="flex items-center justify-center gap-4">
           {navigation.map((item) => (
@@ -24,7 +24,7 @@ export default function Home() {
           ))}
         </ul>
       </nav>
-      <Particles className="absolute inset-0 -z-10" quantity={100} />
+      <Particles className="absolute inset-0 -z-10" amount={100} />
       <h1 className="z-10 text-2xl text-white mb-8 font-display sm:text-4xl md:text-6xl">
         Ruperto Martinez
       </h1>

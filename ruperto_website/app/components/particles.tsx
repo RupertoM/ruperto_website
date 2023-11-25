@@ -5,7 +5,7 @@ import { useMousePosition } from "@/util/mouse";
 
 interface ParticlesProps {
   className?: string;
-  quantity?: number;
+  amount?: number;
   staticity?: number;
   ease?: number;
   refresh?: boolean;
@@ -13,9 +13,9 @@ interface ParticlesProps {
 
 export default function Particles({
   className = "",
-  quantity = 30,
-  staticity = 50,
-  ease = 50,
+  amount = 100,
+  staticity = 40,
+  ease = 60,
   refresh = false,
 }: ParticlesProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -31,12 +31,12 @@ export default function Particles({
     if (canvasRef.current) {
       context.current = canvasRef.current.getContext("2d");
     }
-    initCanvas();
+    createCanvas();
     animate();
-    window.addEventListener("resize", initCanvas);
+    window.addEventListener("resize", createCanvas);
 
     return () => {
-      window.removeEventListener("resize", initCanvas);
+      window.removeEventListener("resize", createCanvas);
     };
   }, []);
 
@@ -45,22 +45,23 @@ export default function Particles({
   }, [mousePosition.x, mousePosition.y]);
 
   useEffect(() => {
-    initCanvas();
+    createCanvas();
   }, [refresh]);
 
-  const initCanvas = () => {
+  const createCanvas = () => {
     resizeCanvas();
     drawParticles();
   };
 
   const onMouseMove = () => {
     if (canvasRef.current) {
-      const rect = canvasRef.current.getBoundingClientRect();
-      const { w, h } = canvasSize.current;
-      const x = mousePosition.x - rect.left - w / 2;
-      const y = mousePosition.y - rect.top - h / 2;
-      const inside = x < w / 2 && x > -w / 2 && y < h / 2 && y > -h / 2;
-      if (inside) {
+      const dimensions = canvasRef.current.getBoundingClientRect();
+      const { w: width, h: height } = canvasSize.current;
+      const x = mousePosition.x - dimensions.left - width / 2;
+      const y = mousePosition.y - dimensions.top - height / 2;
+      const insideChecker =
+        x < width / 2 && x > -width / 2 && y < height / 2 && y > -height / 2;
+      if (insideChecker) {
         mouse.current.x = x;
         mouse.current.y = y;
       }
@@ -147,7 +148,7 @@ export default function Particles({
 
   const drawParticles = () => {
     clearContext();
-    const particleCount = quantity;
+    const particleCount = amount;
     for (let i = 0; i < particleCount; i++) {
       const circle = circleParams();
       drawCircle(circle);
