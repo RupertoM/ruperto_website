@@ -1,0 +1,47 @@
+"use client";
+
+import React, { useEffect, useRef } from "react";
+import Typed from "typed.js";
+
+interface TypingTextProps {}
+
+const TypingText: React.FC<TypingTextProps> = () => {
+  const typedRef = useRef<HTMLHeadingElement>(null);
+
+  useEffect(() => {
+    const defaultStrings = [
+      "Ruperto Martinez.",
+      "a Full Stack Developer with expertise in innovative solutions.",
+      "a Student at the University of North Carolina deeply immersed in Computer Science.",
+      "a tech enthusiast constantly pushing the boundaries of knowledge and always aspiring to learn.",
+      "passionate about my faith, technology, volleyball, and those around me.",
+      "analytical, collborative, innovative, and motivated, looking to make a difference in my community.",
+    ];
+
+    const options = {
+      strings: defaultStrings,
+      typeSpeed: 40,
+      backSpeed: 30,
+      backDelay: 2000,
+      showCursor: true,
+      loop: true,
+      loopCount: Infinity,
+    };
+
+    if (typedRef.current) {
+      const typed = new Typed(typedRef.current, options);
+
+      return () => {
+        typed.destroy();
+      };
+    }
+  }, []);
+
+  return (
+    <div>
+      I am <span ref={typedRef}></span>
+    </div>
+  );
+};
+
+export default TypingText;
