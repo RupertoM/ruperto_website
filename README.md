@@ -1,6 +1,6 @@
 # 🚀 Ruperto's Portfolio Website 🚀
 
-Welcome to the GitHub repository of my personal portfolio website! It's a fun, creative space where I showcase my skills, projects, interests, and everything I love about coding. 
+Welcome to the GitHub repository of my personal portfolio website! It's a fun, creative space where I showcase my skills, projects, interests, and everything I love about coding.
 
 ## 🛠️ Built With
 
