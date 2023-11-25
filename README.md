@@ -6,10 +6,10 @@ Welcome to the GitHub repository of my personal portfolio website! It's a fun, c
 
 This project is built with some of the latest and greatest technologies:
 
-- ![Tailwind CSS](https://refactoringui.nyc3.cdn.digitaloceanspaces.com/tailwind-logo.svg) Tailwind CSS - For beautiful, responsive UI.
-- ![JavaScript](https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png) JavaScript - The programming language that brings life to the website.
-- ![NextJS](https://upload.wikimedia.org/wikipedia/commons/8/8e/Nextjs-logo.svg) NextJS - A React framework for building modern web applications.
-- ![TypeScript](https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg) TypeScript - For static typing in JavaScript, making the code more robust and maintainable.
+- <img src="https://refactoringui.nyc3.cdn.digitaloceanspaces.com/tailwind-logo.svg" width="20"> Tailwind CSS - For beautiful, responsive UI.
+- <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" width="20"> JavaScript - The programming language that brings life to the website.
+- <img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Nextjs-logo.svg" width="20"> NextJS - A React framework for building modern web applications.
+- <img src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg" width="20"> TypeScript - For static typing in JavaScript, making the code more robust and maintainable.
 
 ## 📖 Project Overview
 
