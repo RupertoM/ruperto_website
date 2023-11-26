@@ -13,7 +13,7 @@ interface ParticlesProps {
 
 export default function Particles({
   className = "",
-  amount = 100,
+  amount = 75,
   staticity = 40,
   ease = 60,
   refresh = false,
@@ -21,7 +21,7 @@ export default function Particles({
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const canvasContainerRef = useRef<HTMLDivElement>(null);
   const context = useRef<CanvasRenderingContext2D | null>(null);
-  const circles = useRef<any[]>([]);
+  const stars = useRef<any[]>([]);
   const mousePosition = useMousePosition();
   const mouse = useRef<{ x: number; y: number }>({ x: 0, y: 0 });
   const canvasSize = useRef<{ w: number; h: number }>({ w: 0, h: 0 });
@@ -68,7 +68,7 @@ export default function Particles({
     }
   };
 
-  type Circle = {
+  type Star = {
     x: number;
     y: number;
     translateX: number;
@@ -83,7 +83,7 @@ export default function Particles({
 
   const resizeCanvas = () => {
     if (canvasContainerRef.current && canvasRef.current && context.current) {
-      circles.current.length = 0;
+      stars.current.length = 0;
       canvasSize.current.w = canvasContainerRef.current.offsetWidth;
       canvasSize.current.h = canvasContainerRef.current.offsetHeight;
       canvasRef.current.width = canvasSize.current.w * dpr;
@@ -94,14 +94,14 @@ export default function Particles({
     }
   };
 
-  const circleParams = (): Circle => {
+  const starParams = (): Star => {
     const x = Math.floor(Math.random() * canvasSize.current.w);
     const y = Math.floor(Math.random() * canvasSize.current.h);
     const translateX = 0;
     const translateY = 0;
-    const size = Math.floor(Math.random() * 2) + 0.1;
+    const size = Math.ceil(Math.random() * 3) + 0.5;
     const alpha = 0;
-    const targetAlpha = parseFloat((Math.random() * 0.6 + 0.1).toFixed(1));
+    const targetAlpha = parseFloat((Math.random() * 0.6 + 0.4).toFixed(1));
     const dx = (Math.random() - 0.5) * 0.2;
     const dy = (Math.random() - 0.5) * 0.2;
     const magnetism = 0.1 + Math.random() * 4;
@@ -119,18 +119,35 @@ export default function Particles({
     };
   };
 
-  const drawCircle = (circle: Circle, update = false) => {
+  const drawStar = (star: Star, update = false) => {
     if (context.current) {
-      const { x, y, translateX, translateY, size, alpha } = circle;
+      const { x, y, translateX, translateY, size, alpha } = star;
       context.current.translate(translateX, translateY);
       context.current.beginPath();
-      context.current.arc(x, y, size, 0, 2 * Math.PI);
+
+      const spikes = 5; // Adjust the number of spikes for the star
+      const innerRadius = size / 8;
+      const outerRadius = size;
+
+      for (let i = 0; i < spikes * 2; i++) {
+        const radius = i % 2 === 0 ? outerRadius : innerRadius;
+        const currX = x + Math.cos((i * Math.PI) / spikes) * radius;
+        const currY = y + Math.sin((i * Math.PI) / spikes) * radius;
+
+        if (i === 0) {
+          context.current.moveTo(currX, currY);
+        } else {
+          context.current.lineTo(currX, currY);
+        }
+      }
+
+      context.current.closePath();
       context.current.fillStyle = `rgba(255, 255, 255, ${alpha})`;
       context.current.fill();
       context.current.setTransform(dpr, 0, 0, dpr, 0, 0);
 
       if (!update) {
-        circles.current.push(circle);
+        stars.current.push(star);
       }
     }
   };
@@ -150,8 +167,8 @@ export default function Particles({
     clearContext();
     const particleCount = amount;
     for (let i = 0; i < particleCount; i++) {
-      const circle = circleParams();
-      drawCircle(circle);
+      const star = starParams();
+      drawStar(star);
     }
   };
 
@@ -169,56 +186,56 @@ export default function Particles({
 
   const animate = () => {
     clearContext();
-    circles.current.forEach((circle: Circle, i: number) => {
+    stars.current.forEach((star: Star, i: number) => {
       // Handle the alpha value
       const edge = [
-        circle.x + circle.translateX - circle.size, // distance from left edge
-        canvasSize.current.w - circle.x - circle.translateX - circle.size, // distance from right edge
-        circle.y + circle.translateY - circle.size, // distance from top edge
-        canvasSize.current.h - circle.y - circle.translateY - circle.size, // distance from bottom edge
+        star.x + star.translateX - star.size, // distance from left edge
+        canvasSize.current.w - star.x - star.translateX - star.size, // distance from right edge
+        star.y + star.translateY - star.size, // distance from top edge
+        canvasSize.current.h - star.y - star.translateY - star.size, // distance from bottom edge
       ];
       const closestEdge = edge.reduce((a, b) => Math.min(a, b));
       const remapClosestEdge = parseFloat(
         remapValue(closestEdge, 0, 20, 0, 1).toFixed(2)
       );
       if (remapClosestEdge > 1) {
-        circle.alpha += 0.02;
-        if (circle.alpha > circle.targetAlpha) {
-          circle.alpha = circle.targetAlpha;
+        star.alpha += 0.02;
+        if (star.alpha > star.targetAlpha) {
+          star.alpha = star.targetAlpha;
         }
       } else {
-        circle.alpha = circle.targetAlpha * remapClosestEdge;
+        star.alpha = star.targetAlpha * remapClosestEdge;
       }
-      circle.x += circle.dx;
-      circle.y += circle.dy;
-      circle.translateX +=
-        (mouse.current.x / (staticity / circle.magnetism) - circle.translateX) /
+      star.x += star.dx;
+      star.y += star.dy;
+      star.translateX +=
+        (mouse.current.x / (staticity / star.magnetism) - star.translateX) /
         ease;
-      circle.translateY +=
-        (mouse.current.y / (staticity / circle.magnetism) - circle.translateY) /
+      star.translateY +=
+        (mouse.current.y / (staticity / star.magnetism) - star.translateY) /
         ease;
-      // circle gets out of the canvas
+      // star gets out of the canvas
       if (
-        circle.x < -circle.size ||
-        circle.x > canvasSize.current.w + circle.size ||
-        circle.y < -circle.size ||
-        circle.y > canvasSize.current.h + circle.size
+        star.x < -star.size ||
+        star.x > canvasSize.current.w + star.size ||
+        star.y < -star.size ||
+        star.y > canvasSize.current.h + star.size
       ) {
-        // remove the circle from the array
-        circles.current.splice(i, 1);
-        // create a new circle
-        const newCircle = circleParams();
-        drawCircle(newCircle);
-        // update the circle position
+        // remove the star from the array
+        stars.current.splice(i, 1);
+        // create a new star
+        const newStar = starParams();
+        drawStar(newStar);
+        // update the star position
       } else {
-        drawCircle(
+        drawStar(
           {
-            ...circle,
-            x: circle.x,
-            y: circle.y,
-            translateX: circle.translateX,
-            translateY: circle.translateY,
-            alpha: circle.alpha,
+            ...star,
+            x: star.x,
+            y: star.y,
+            translateX: star.translateX,
+            translateY: star.translateY,
+            alpha: star.alpha,
           },
           true
         );

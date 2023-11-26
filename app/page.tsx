@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import Particles from "./components/particles";
+import TypingText from "./components/TypingText";
 
 const navigation = [
   { name: "Skills", href: "/skills" },
@@ -11,27 +12,35 @@ const navigation = [
 export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-bl from-black via-slate-500/25 to-black">
-      <nav className="my-8">
-        <ul className="flex items-center justify-center gap-4">
+      <nav className="absolute top-10 md:absolute md:top-2 md:right-10 md:mt-6 md:mr-6">
+        <ul className="flex items-left justify-left gap-4">
           {navigation.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className="text-sm text-zinc-500 hover:text-zinc-300"
+              className="text-base text-neutral-400 hover:text-neutral-200"
             >
               {item.name}
             </Link>
           ))}
         </ul>
       </nav>
-      <Particles className="absolute inset-0 -z-10" amount={100} />
-      <h1 className="z-10 text-2xl text-white mb-8 font-display sm:text-4xl md:text-6xl">
+      <h1 className="text-xl text-white mb-4 font-display sm:text-2xl md:text-3xl font-bold">
         Ruperto Martinez
       </h1>
-      <h2 className="text-sm text-zinc-500 mt-2">
-        Software Engineer, Full Stack Developer, Student at the University of
-        North Carolina
-      </h2>
+      <Particles className="absolute inset-0 -z-10" amount={75} />
+      <div>
+        <img
+          src="/personal_photo.png"
+          alt="Profile Picture"
+          className="rounded-full w-40 h-40 object-cover mb-4"
+        />
+      </div>
+      <div className="z-10 text-center">
+        <h2 className="flex items-center justify-center mx-2 text-base text-neutral-400 mt-2">
+          <TypingText />
+        </h2>
+      </div>
     </div>
   );
 }
