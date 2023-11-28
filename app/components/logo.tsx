@@ -4,6 +4,7 @@ interface LogoProps {
   title: string;
   imgSrc: string;
   altText: string;
+  className: string;
 }
 
 const Logo: React.FC<LogoProps> = ({ title, imgSrc, altText }) => {

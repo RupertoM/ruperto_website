@@ -1,6 +1,8 @@
 // Skills.tsx
 import React from "react";
 import Logo from "../components/logo";
+import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
+import Link from "next/link";
 
 const Skills: React.FC = () => {
   const logos = [
@@ -17,14 +19,26 @@ const Skills: React.FC = () => {
   ];
 
   return (
-    <div className="w-screen h-screen overflow-hidden bg-gradient-to-bl from-slate-500/20 via-slate-500/25 to-slate-500/20">
+    <div className="w-screen h-screen overflow-hidden bg-gradient-to-br from-slate-500/10 via-slate-200/25 to-slate-500/10">
+      <Link href="/">
+        <KeyboardBackspaceIcon
+          style={{
+            fontSize: 40,
+            color: "white",
+            marginLeft: 40,
+            marginTop: 25,
+          }}
+        />
+      </Link>
       <div className="flex flex-col items-start justify-start">
-        <h1 className="text-2xl text-white ml-10 mt-10 font-display sm:text-4xl md:text-6xl font-bold">
-          LANGUAGES AND LIBRARIES
+        <h1 className="text-xl text-white mt-5 mx-auto font-display sm:text-2xl md:text-5xl">
+          <p className="font-extrabold bg-clip-text text-transparent bg-[linear-gradient(to_right,theme(colors.sky.400),theme(colors.green.300),theme(colors.indigo.400),theme(colors.indigo.100),theme(colors.sky.400))] bg-[length:200%_auto] animate-gradient">
+            LANGUAGES AND LIBRARIES
+          </p>
         </h1>
       </div>
-      <div className="flex flex-row items-start justify-start mt-10 w-screen h-screen overflow-hidden">
-        <div className="text-center ml-10">
+      <div className="flex flex-row mt-20 items-start justify-center w-screen h-screen overflow-hidden">
+        <div className="text-center">
           <h5 className="text-xl mb-4">Spanish</h5>
           <img
             src="/PR.svg"
@@ -33,7 +47,11 @@ const Skills: React.FC = () => {
           />
         </div>
         {logos.map((logo, index) => (
-          <Logo key={index} {...logo} />
+          <Logo
+            className="object-contain mx-auto w-20 h-20 text-center"
+            key={index}
+            {...logo}
+          />
         ))}
       </div>
     </div>
