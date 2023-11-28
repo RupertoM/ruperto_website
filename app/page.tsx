@@ -25,7 +25,7 @@ export default function Home() {
           ))}
         </ul>
       </nav>
-      <h1 className="text-xl text-white mb-4 font-display sm:text-2xl md:text-3xl font-bold">
+      <h1 className="text-xl text-white mb-8 font-display sm:text-2xl md:text-4xl font-bold">
         Ruperto Martinez
       </h1>
       <Particles className="absolute inset-0 -z-10" amount={75} />
@@ -33,11 +33,11 @@ export default function Home() {
         <img
           src="/personal_photo.png"
           alt="Profile Picture"
-          className="rounded-full w-40 h-40 object-cover mb-4"
+          className="rounded-full w-40 h-40 object-cover mb-8"
         />
       </div>
       <div className="z-10 text-center">
-        <h2 className="flex items-center justify-center mx-2 text-base text-neutral-400 mt-2">
+        <h2 className="flex items-center justify-center mx-2 text-base text-neutral-400">
           <TypingText />
         </h2>
       </div>
