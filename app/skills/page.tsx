@@ -32,7 +32,7 @@ const Skills: React.FC = () => {
       </Link>
       <div className="flex flex-col items-start justify-start">
         <h1 className="text-xl text-white mt-5 mx-auto font-display sm:text-2xl md:text-5xl">
-          <p className="font-extrabold bg-clip-text text-transparent bg-[linear-gradient(to_right,theme(colors.sky.400),theme(colors.green.300),theme(colors.indigo.400),theme(colors.indigo.100),theme(colors.sky.400))] bg-[length:200%_auto] animate-gradient">
+          <p className="font-extrabold bg-clip-text text-transparent bg-[linear-gradient(to_right,theme(colors.stone.400),theme(colors.zinc.100),theme(colors.zinc.400),theme(colors.zinc.100),theme(colors.stone.400))] bg-[length:200%_auto] animate-gradient">
             LANGUAGES AND LIBRARIES
           </p>
         </h1>
