@@ -1,14 +1,20 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import GetAppIcon from "@mui/icons-material/GetApp";
+import CircularProgress from "@mui/material/CircularProgress";
+import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 
 const ResumePDF: React.FC = () => {
   const pdfUrl: string = "/Ruperto's Resume.pdf";
   const [isMobile, setIsMobile] = useState(false);
+  const [downloadState, setDownloadState] = useState<
+    "idle" | "downloading" | "done"
+  >("idle");
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
+      setIsMobile(window.innerWidth <= 768);
     };
     handleResize();
     window.addEventListener("resize", handleResize);
@@ -17,6 +23,22 @@ const ResumePDF: React.FC = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
+  const handleDownload = () => {
+    setDownloadState("downloading");
+
+    // Simulate download delay
+    setTimeout(() => {
+      const link = document.createElement("a");
+      link.href = pdfUrl;
+      link.download = "Rupertos_Resume.pdf";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+
+      setDownloadState("done");
+    }, 1500);
+  };
 
   return (
     <div
@@ -31,17 +53,54 @@ const ResumePDF: React.FC = () => {
         }`}
       >
         {isMobile ? (
-          <img
-            src={"/Resume.png"}
-            alt="Resume"
-            className="w-full h-full object-fill border-0.375rem"
-          />
+          <>
+            <img
+              src={"/Resume.png"}
+              alt="Resume"
+              className="w-full h-full object-fill border-0.375rem"
+            />
+            {downloadState === "idle" && (
+              <div className="absolute bottom-4 right-4 text-white p-2 rounded cursor-pointer">
+                <GetAppIcon onClick={handleDownload} />
+              </div>
+            )}
+            {downloadState === "downloading" && (
+              <div className="absolute bottom-4 right-4 text-white p-2 rounded">
+                <CircularProgress size={24} thickness={4} />
+              </div>
+            )}
+            {downloadState === "done" && (
+              <div className="absolute bottom-4 right-4 text-green-500 p-2 rounded">
+                <CheckCircleIcon />
+              </div>
+            )}
+          </>
         ) : (
-          <embed
-            src={pdfUrl + "#navpanes=0&messages=0&toolbar=0"}
-            type="application/pdf"
-            className="w-full h-full border-0.375rem"
-          />
+          <>
+            <embed
+              src={pdfUrl + "#navpanes=0&messages=0&toolbar=0"}
+              type="application/pdf"
+              className="w-full h-full border-0.375rem"
+            />
+            {downloadState === "idle" && (
+              <button
+                className="absolute bottom-4 right-4 text-stone-800 p-2 rounded cursor-pointer"
+                onClick={handleDownload}
+              >
+                <GetAppIcon />
+              </button>
+            )}
+            {downloadState === "downloading" && (
+              <div className="absolute bottom-4 right-4 text-stone-800 p-2 rounded">
+                <CircularProgress size={24} thickness={4} />
+              </div>
+            )}
+            {downloadState === "done" && (
+              <div className="absolute bottom-4 right-4 text-green-500 p-2 rounded">
+                <CheckCircleIcon />
+              </div>
+            )}
+          </>
         )}
       </div>
     </div>
