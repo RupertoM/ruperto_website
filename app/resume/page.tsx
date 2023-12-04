@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
+import ResumePDF from "../components/resume";
 
 export default function Resume() {
   return (
@@ -15,7 +16,9 @@ export default function Resume() {
           }}
         />
       </Link>
-      <div className="flex flex-col items-start justify-start"></div>
+      <div className="flex items-center justify-center w-full h-full">
+        <ResumePDF />
+      </div>
     </div>
   );
 }
