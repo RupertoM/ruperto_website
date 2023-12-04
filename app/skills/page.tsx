@@ -32,13 +32,13 @@ const Skills: React.FC = () => {
           style={{
             fontSize: 40,
             color: "white",
-            marginLeft: "2.5rem",
+            marginLeft: "1.5rem",
             marginTop: "1.25rem",
           }}
         />
       </Link>
       <div className="flex flex-col items-start justify-start">
-        <h1 className="text-xl text-white mt-5 mx-auto font-display sm:text-2xl md:text-5xl">
+        <h1 className="text-2xl text-white mt-20 mx-auto font-display sm:text-3xl md:text-5xl md:mt-5">
           <p className="font-extrabold bg-clip-text text-transparent bg-[linear-gradient(to_right,theme(colors.stone.400),theme(colors.zinc.100),theme(colors.zinc.400),theme(colors.zinc.100),theme(colors.stone.400))] bg-[length:200%_auto] animate-gradient">
             PROGRAMMING STACK
           </p>
