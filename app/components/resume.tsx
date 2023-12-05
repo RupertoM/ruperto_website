@@ -60,17 +60,17 @@ const ResumePDF: React.FC = () => {
               className="w-full h-full object-fill border-0.375rem"
             />
             {downloadState === "idle" && (
-              <div className="absolute bottom-4 right-4 text-white p-2 rounded cursor-pointer">
+              <div className="absolute bottom-0 right-0 text-sky-500 p-2 rounded cursor-pointer">
                 <GetAppIcon onClick={handleDownload} />
               </div>
             )}
             {downloadState === "downloading" && (
-              <div className="absolute bottom-4 right-4 text-white p-2 rounded">
+              <div className="absolute bottom-0 right-0 text-blue-500 p-2 rounded">
                 <CircularProgress size={24} thickness={4} />
               </div>
             )}
             {downloadState === "done" && (
-              <div className="absolute bottom-4 right-4 text-green-500 p-2 rounded">
+              <div className="absolute bottom-0 right-0 text-green-500 p-2 rounded">
                 <CheckCircleIcon />
               </div>
             )}
