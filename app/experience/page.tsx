@@ -3,7 +3,7 @@ import Logo from "../components/logo";
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 import Link from "next/link";
 
-const Skills: React.FC = () => {
+const Experience: React.FC = () => {
   const languages = [
     {
       title: "Spanish",
@@ -74,4 +74,4 @@ const Skills: React.FC = () => {
   );
 };
 
-export default Skills;
+export default Experience;

@@ -84,7 +84,7 @@ const ResumePDF: React.FC = () => {
             />
             {downloadState === "idle" && (
               <button
-                className="absolute bottom-4 right-4 text-stone-800 p-2 rounded cursor-pointer"
+                className="absolute bottom-4 right-4 text-stone-800 p-2 rounded cursor-pointer hover:text-blue-500 hover:text-lg"
                 onClick={handleDownload}
               >
                 <GetAppIcon />

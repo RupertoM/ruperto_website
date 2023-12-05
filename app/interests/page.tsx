@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 
-export default function Projects() {
+export default function Interests() {
   return (
     <div className="w-screen h-screen overflow-hidden bg-gradient-to-br from-slate-500/10 via-slate-200/25 to-slate-500/10">
       <Link href="/">
