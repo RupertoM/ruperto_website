@@ -43,7 +43,7 @@ const Skills: React.FC = () => {
         />
       </Link>
       <div className="flex flex-col items-start justify-start">
-        <h1 className="text-2xl text-white mt-20 mx-auto font-display sm:text-3xl md:text-5xl md:mt-5">
+        <h1 className="text-2xl text-white mt-10 mb-5 mx-auto font-display sm:text-3xl md:text-5xl md:mt-5 md:mb-0">
           <p className="font-extrabold bg-clip-text text-transparent bg-[linear-gradient(to_right,theme(colors.stone.400),theme(colors.zinc.100),theme(colors.zinc.400),theme(colors.zinc.100),theme(colors.stone.400))] bg-[length:200%_auto] animate-gradient">
             PROGRAMMING STACK
           </p>
