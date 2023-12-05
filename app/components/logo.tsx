@@ -5,16 +5,24 @@ interface LogoProps {
   imgSrc: string;
   altText: string;
   className: string;
+  isContain?: boolean;
 }
 
-const Logo: React.FC<LogoProps> = ({ title, imgSrc, altText }) => {
+const Logo: React.FC<LogoProps> = ({
+  title,
+  imgSrc,
+  altText,
+  isContain = false,
+}) => {
   return (
-    <div className="text-center ml-10">
-      <h5 className="text-xl mb-4">{title}</h5>
+    <div className="text-center ml-5 mr-5">
+      <h5 className="text-xl mb-2 md:mb-4">{title}</h5>
       <img
         src={imgSrc}
         alt={altText}
-        className="w-20 h-20 object-cover mx-auto"
+        className={`w-10 h-10 md:w-20 md:h-20 mb-5 md:mb-10 ${
+          isContain ? "object-contain" : "object-cover"
+        } mx-auto`}
       />
     </div>
   );

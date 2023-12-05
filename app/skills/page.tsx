@@ -1,4 +1,3 @@
-// Skills.tsx
 import React from "react";
 import Logo from "../components/logo";
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
@@ -6,6 +5,12 @@ import Link from "next/link";
 
 const Skills: React.FC = () => {
   const languages = [
+    {
+      title: "Spanish",
+      imgSrc: "/PR.svg",
+      altText: "Spanish Logo",
+      isContain: true,
+    },
     { title: "Python", imgSrc: "/Python.svg", altText: "Python Logo" },
     { title: "Java", imgSrc: "/Java.svg", altText: "Java Logo" },
     { title: "Javascript", imgSrc: "/JS.svg", altText: "Javascript Logo" },
@@ -44,31 +49,26 @@ const Skills: React.FC = () => {
           </p>
         </h1>
       </div>
-      <div className="languages-logo-div font-mono font-extrabold flex flex-row mt-20 items-start justify-center w-screen overflow-hidden">
-        <div className="text-center">
-          <h5 className="text-xl mb-4">Spanish</h5>
-          <img
-            src="/PR.svg"
-            alt="Puerto Rican Flag"
-            className="w-20 h-20 object-contain mx-auto"
-          />
+      <div className="logos-container font-mono font-extrabold flex flex-wrap justify-center items-start mt-10 md:mt-20 overflow-hidden">
+        <div className="w-full flex flex-wrap justify-center">
+          {languages.map((logo, index) => (
+            <Logo
+              className="object-contain mx-auto w-20 h-20 text-center mb-8"
+              key={index}
+              {...logo}
+            />
+          ))}
         </div>
-        {languages.map((logo, index) => (
-          <Logo
-            className="object-contain mx-auto w-20 h-20 text-center"
-            key={index}
-            {...logo}
-          />
-        ))}
-      </div>
-      <div className="libraries-logo-div font-mono font-extrabold flex flex-row mt-20 items-start justify-center w-screen overflow-hidden">
-        {libraries.map((logo, index) => (
-          <Logo
-            className="object-contain mx-auto w-20 h-20 text-center"
-            key={index}
-            {...logo}
-          />
-        ))}
+
+        <div className="w-full flex flex-wrap justify-center">
+          {libraries.map((logo, index) => (
+            <Logo
+              className="object-contain mx-auto w-20 h-20 text-center mb-8"
+              key={index}
+              {...logo}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );
