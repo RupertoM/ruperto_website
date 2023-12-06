@@ -30,47 +30,140 @@ const Experience: React.FC = () => {
     { title: "NodeJS", imgSrc: "/NodeJS.svg", altText: "NodeJS Logo" },
   ];
 
-  return (
-    <div className="w-screen h-screen overflow-hidden bg-gradient-to-br from-slate-500/10 via-slate-200/25 to-slate-500/10">
-      <Link href="/">
-        <KeyboardBackspaceIcon
-          style={{
-            fontSize: 40,
-            color: "white",
-            marginLeft: "1.5rem",
-            marginTop: "1.25rem",
-          }}
-        />
-      </Link>
-      <div className="flex flex-col items-start justify-start">
-        <h1 className="text-2xl text-white mt-10 mb-5 mx-auto font-display sm:text-3xl md:text-5xl md:mt-5 md:mb-0">
-          <p className="font-extrabold bg-clip-text text-transparent bg-[linear-gradient(to_right,theme(colors.stone.400),theme(colors.zinc.100),theme(colors.zinc.400),theme(colors.zinc.100),theme(colors.stone.400))] bg-[length:200%_auto] animate-gradient">
-            PROGRAMMING STACK
-          </p>
-        </h1>
-      </div>
-      <div className="logos-container font-mono font-extrabold flex flex-wrap justify-center items-start mt-10 md:mt-20 overflow-hidden">
-        <div className="w-full flex flex-wrap justify-center">
-          {languages.map((logo, index) => (
-            <Logo
-              className="object-contain mx-auto w-20 h-20 text-center mb-8"
-              key={index}
-              {...logo}
-            />
-          ))}
-        </div>
+  const devStack = [
+    { title: "OpenShift", imgSrc: "/OpenShift.png", altText: "OpenShift Logo" },
+    {
+      title: "Kubernetes",
+      imgSrc: "/Kubernetes.png",
+      altText: "GKE Logo",
+    },
+    {
+      title: "Docker",
+      imgSrc: "/Docker.png",
+      altText: "Docker Logo",
+      isContain: true,
+    },
+    { title: "Material UI", imgSrc: "/MUI.png", altText: "MUI Logo" },
+    { title: "Virtual Studio", imgSrc: "/VSCode.svg", altText: "VSCode Logo" },
+    { title: "IntelliJ", imgSrc: "/IntelliJ.png", altText: "IntelliJ Logo" },
+    { title: "CLI", imgSrc: "/CLI.svg", altText: "CLI Logo" },
+    { title: "APIs", imgSrc: "/API.png", altText: "API Logo" },
+  ];
 
-        <div className="w-full flex flex-wrap justify-center">
-          {libraries.map((logo, index) => (
-            <Logo
-              className="object-contain mx-auto w-20 h-20 text-center mb-8"
-              key={index}
-              {...logo}
+  const devStack2 = [
+    {
+      title: "GitHub",
+      imgSrc: "/GitHub.png",
+      altText: "GitHub Logo",
+      isContain: true,
+    },
+    {
+      title: "Google Cloud",
+      imgSrc: "/GCP.png",
+      altText: "GCP Logo",
+      isContain: true,
+    },
+    {
+      title: "Confluence",
+      imgSrc: "/confluence.svg",
+      altText: "Confluence Logo",
+    },
+    { title: "Jira", imgSrc: "/jira.svg", altText: "Jira Logo" },
+    { title: "VertexAI", imgSrc: "/vertexai.svg", altText: "VertexAI Logo" },
+    { title: "ChatGPT", imgSrc: "/chatgpt.png", altText: "ChatGPT Logo" },
+    {
+      title: "GitHub Actions",
+      imgSrc: "/GitHub-Actions.png",
+      altText: "GitHub Actions Logo",
+    },
+  ];
+
+  return (
+    <>
+      <div className="section">
+        <div className="w-screen h-screen overflow-hidden bg-gradient-to-br from-slate-500/10 via-slate-200/25 to-slate-500/10">
+          <Link href="/">
+            <KeyboardBackspaceIcon
+              style={{
+                fontSize: 40,
+                color: "white",
+                marginLeft: "1.5rem",
+                marginTop: "1.25rem",
+              }}
             />
-          ))}
+          </Link>
+          <div className="flex flex-col items-start justify-start">
+            <h1 className="text-2xl text-white mt-10 mb-5 mx-auto font-display sm:text-3xl md:text-5xl md:mt-5 md:mb-0">
+              <p className="font-extrabold bg-clip-text text-transparent bg-[linear-gradient(to_right,theme(colors.stone.400),theme(colors.zinc.100),theme(colors.zinc.400),theme(colors.zinc.100),theme(colors.stone.400))] bg-[length:200%_auto] animate-gradient">
+                PROGRAMMING STACK
+              </p>
+            </h1>
+          </div>
+          <div className="logos-container font-mono font-extrabold flex flex-wrap justify-center items-start mt-10 md:mt-20 overflow-hidden">
+            <div className="w-full flex flex-wrap justify-center">
+              {languages.map((logo, index) => (
+                <Logo
+                  className="object-contain mx-auto w-20 h-20 text-center mb-8"
+                  key={index}
+                  {...logo}
+                />
+              ))}
+            </div>
+            <div className="w-full flex flex-wrap justify-center">
+              {libraries.map((logo, index) => (
+                <Logo
+                  className="object-contain mx-auto w-20 h-20 text-center mb-8"
+                  key={index}
+                  {...logo}
+                />
+              ))}
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+
+      <div className="section">
+        <div className="w-screen h-screen overflow-hidden bg-gradient-to-br from-slate-500/10 via-slate-200/25 to-slate-500/10">
+          <Link href="/">
+            <KeyboardBackspaceIcon
+              style={{
+                fontSize: 40,
+                color: "white",
+                marginLeft: "1.5rem",
+                marginTop: "1.25rem",
+              }}
+            />
+          </Link>
+          <div className="flex flex-col items-start justify-start">
+            <h1 className="text-2xl text-white mt-10 mb-5 mx-auto font-display sm:text-3xl md:text-5xl md:mt-5 md:mb-0">
+              <p className="font-extrabold bg-clip-text text-transparent bg-[linear-gradient(to_right,theme(colors.stone.400),theme(colors.zinc.100),theme(colors.zinc.400),theme(colors.zinc.100),theme(colors.stone.400))] bg-[length:200%_auto] animate-gradient">
+                DEVELOPMENT STACK
+              </p>
+            </h1>
+          </div>
+          <div className="logos-container font-mono font-extrabold flex flex-wrap justify-center items-start mt-10 md:mt-20 overflow-hidden">
+            <div className="w-full flex flex-wrap justify-center">
+              {devStack.map((logo, index) => (
+                <Logo
+                  className="object-contain mx-auto w-20 h-20 text-center mb-8"
+                  key={index}
+                  {...logo}
+                />
+              ))}
+            </div>
+            <div className="w-full flex flex-wrap justify-center">
+              {devStack2.map((logo, index) => (
+                <Logo
+                  className="object-contain mx-auto w-20 h-20 text-center mb-8"
+                  key={index}
+                  {...logo}
+                />
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
   );
 };
 
