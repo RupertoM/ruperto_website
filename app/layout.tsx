@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import "./globals.css";
 import Navbar from "./components/navbar";
+import BackIcon from "./components/backIcon";
 
 export const metadata: Metadata = {
   title: "Ruperto's Portfolio",
@@ -18,6 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <BackIcon></BackIcon>
         <Navbar></Navbar>
         {children}
       </body>

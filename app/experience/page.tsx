@@ -1,7 +1,5 @@
 import React from "react";
 import Logo from "../components/logo";
-import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
-import Link from "next/link";
 
 const Experience: React.FC = () => {
   const languages = [
@@ -49,10 +47,9 @@ const Experience: React.FC = () => {
       isContain: true,
     },
     { title: "Material UI", imgSrc: "/MUI.png", altText: "MUI Logo" },
-    { title: "Virtual Studio", imgSrc: "/VSCode.svg", altText: "VSCode Logo" },
+    { title: "VS Code", imgSrc: "/VSCode.svg", altText: "VSCode Logo" },
     { title: "IntelliJ", imgSrc: "/IntelliJ.png", altText: "IntelliJ Logo" },
     { title: "CLI", imgSrc: "/CLI.svg", altText: "CLI Logo" },
-    { title: "APIs", imgSrc: "/API.png", altText: "API Logo" },
   ];
 
   const devStack2 = [
@@ -86,18 +83,8 @@ const Experience: React.FC = () => {
   return (
     <div className="snap-y snap-mandatory h-screen w-screen overflow-scroll">
       <div className="snap-center w-screen h-screen overflow-hidden bg-gradient-to-br from-slate-500/10 via-slate-200/25 to-slate-500/10">
-        <Link href="/">
-          <KeyboardBackspaceIcon
-            style={{
-              fontSize: 40,
-              color: "white",
-              marginLeft: "1.5rem",
-              marginTop: "1.25rem",
-            }}
-          />
-        </Link>
         <div className="flex flex-col items-start justify-start">
-          <h1 className="text-2xl text-white mt-10 mb-5 mx-auto font-display sm:text-3xl md:text-5xl md:mt-5 md:mb-0">
+          <h1 className="text-2xl text-white mt-28 mb-5 mx-auto font-display sm:text-3xl md:text-5xl md:mt-20 md:mb-0">
             <p className="font-extrabold bg-clip-text text-transparent bg-[linear-gradient(to_right,theme(colors.stone.400),theme(colors.zinc.100),theme(colors.zinc.400),theme(colors.zinc.100),theme(colors.stone.400))] bg-[length:200%_auto] animate-gradient">
               PROGRAMMING STACK
             </p>
@@ -126,18 +113,8 @@ const Experience: React.FC = () => {
       </div>
 
       <div className="snap-center w-screen h-screen overflow-hidden bg-gradient-to-br from-slate-500/10 via-slate-200/25 to-slate-500/10">
-        <Link href="/">
-          <KeyboardBackspaceIcon
-            style={{
-              fontSize: 40,
-              color: "white",
-              marginLeft: "1.5rem",
-              marginTop: "1.25rem",
-            }}
-          />
-        </Link>
         <div className="flex flex-col items-start justify-start">
-          <h1 className="text-2xl text-white mt-10 mb-5 mx-auto font-display sm:text-3xl md:text-5xl md:mt-5 md:mb-0">
+          <h1 className="text-2xl text-white mt-28 mb-5 mx-auto font-display sm:text-3xl md:text-5xl md:mt-20 md:mb-0">
             <p className="font-extrabold bg-clip-text text-transparent bg-[linear-gradient(to_right,theme(colors.stone.400),theme(colors.zinc.100),theme(colors.zinc.400),theme(colors.zinc.100),theme(colors.stone.400))] bg-[length:200%_auto] animate-gradient">
               DEVELOPMENT STACK
             </p>
