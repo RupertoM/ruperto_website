@@ -27,7 +27,12 @@ const Experience: React.FC = () => {
     { title: "Angular", imgSrc: "/Angular.svg", altText: "Angular Logo" },
     { title: "Spring Boot", imgSrc: "/Spring.svg", altText: "Spring Logo" },
     { title: "NextJS", imgSrc: "/NextJS.svg", altText: "NextJS Logo" },
-    { title: "NodeJS", imgSrc: "/NodeJS.svg", altText: "NodeJS Logo" },
+    {
+      title: "NodeJS",
+      imgSrc: "/NodeJS.svg",
+      altText: "NodeJS Logo",
+      isContain: true,
+    },
   ];
 
   const devStack = [
@@ -79,91 +84,87 @@ const Experience: React.FC = () => {
   ];
 
   return (
-    <>
-      <div className="section">
-        <div className="w-screen h-screen overflow-hidden bg-gradient-to-br from-slate-500/10 via-slate-200/25 to-slate-500/10">
-          <Link href="/">
-            <KeyboardBackspaceIcon
-              style={{
-                fontSize: 40,
-                color: "white",
-                marginLeft: "1.5rem",
-                marginTop: "1.25rem",
-              }}
-            />
-          </Link>
-          <div className="flex flex-col items-start justify-start">
-            <h1 className="text-2xl text-white mt-10 mb-5 mx-auto font-display sm:text-3xl md:text-5xl md:mt-5 md:mb-0">
-              <p className="font-extrabold bg-clip-text text-transparent bg-[linear-gradient(to_right,theme(colors.stone.400),theme(colors.zinc.100),theme(colors.zinc.400),theme(colors.zinc.100),theme(colors.stone.400))] bg-[length:200%_auto] animate-gradient">
-                PROGRAMMING STACK
-              </p>
-            </h1>
+    <div className="snap-y snap-mandatory h-screen w-screen overflow-scroll">
+      <div className="snap-center w-screen h-screen overflow-hidden bg-gradient-to-br from-slate-500/10 via-slate-200/25 to-slate-500/10">
+        <Link href="/">
+          <KeyboardBackspaceIcon
+            style={{
+              fontSize: 40,
+              color: "white",
+              marginLeft: "1.5rem",
+              marginTop: "1.25rem",
+            }}
+          />
+        </Link>
+        <div className="flex flex-col items-start justify-start">
+          <h1 className="text-2xl text-white mt-10 mb-5 mx-auto font-display sm:text-3xl md:text-5xl md:mt-5 md:mb-0">
+            <p className="font-extrabold bg-clip-text text-transparent bg-[linear-gradient(to_right,theme(colors.stone.400),theme(colors.zinc.100),theme(colors.zinc.400),theme(colors.zinc.100),theme(colors.stone.400))] bg-[length:200%_auto] animate-gradient">
+              PROGRAMMING STACK
+            </p>
+          </h1>
+        </div>
+        <div className="logos-container font-mono font-extrabold flex flex-wrap justify-center items-start mt-10 md:mt-20 overflow-hidden">
+          <div className="w-full flex flex-wrap justify-center">
+            {languages.map((logo, index) => (
+              <Logo
+                className="object-contain mx-auto w-20 h-20 text-center mb-8"
+                key={index}
+                {...logo}
+              />
+            ))}
           </div>
-          <div className="logos-container font-mono font-extrabold flex flex-wrap justify-center items-start mt-10 md:mt-20 overflow-hidden">
-            <div className="w-full flex flex-wrap justify-center">
-              {languages.map((logo, index) => (
-                <Logo
-                  className="object-contain mx-auto w-20 h-20 text-center mb-8"
-                  key={index}
-                  {...logo}
-                />
-              ))}
-            </div>
-            <div className="w-full flex flex-wrap justify-center">
-              {libraries.map((logo, index) => (
-                <Logo
-                  className="object-contain mx-auto w-20 h-20 text-center mb-8"
-                  key={index}
-                  {...logo}
-                />
-              ))}
-            </div>
+          <div className="w-full flex flex-wrap justify-center">
+            {libraries.map((logo, index) => (
+              <Logo
+                className="object-contain mx-auto w-20 h-20 text-center mb-8"
+                key={index}
+                {...logo}
+              />
+            ))}
           </div>
         </div>
       </div>
 
-      <div className="section">
-        <div className="w-screen h-screen overflow-hidden bg-gradient-to-br from-slate-500/10 via-slate-200/25 to-slate-500/10">
-          <Link href="/">
-            <KeyboardBackspaceIcon
-              style={{
-                fontSize: 40,
-                color: "white",
-                marginLeft: "1.5rem",
-                marginTop: "1.25rem",
-              }}
-            />
-          </Link>
-          <div className="flex flex-col items-start justify-start">
-            <h1 className="text-2xl text-white mt-10 mb-5 mx-auto font-display sm:text-3xl md:text-5xl md:mt-5 md:mb-0">
-              <p className="font-extrabold bg-clip-text text-transparent bg-[linear-gradient(to_right,theme(colors.stone.400),theme(colors.zinc.100),theme(colors.zinc.400),theme(colors.zinc.100),theme(colors.stone.400))] bg-[length:200%_auto] animate-gradient">
-                DEVELOPMENT STACK
-              </p>
-            </h1>
+      <div className="snap-center w-screen h-screen overflow-hidden bg-gradient-to-br from-slate-500/10 via-slate-200/25 to-slate-500/10">
+        <Link href="/">
+          <KeyboardBackspaceIcon
+            style={{
+              fontSize: 40,
+              color: "white",
+              marginLeft: "1.5rem",
+              marginTop: "1.25rem",
+            }}
+          />
+        </Link>
+        <div className="flex flex-col items-start justify-start">
+          <h1 className="text-2xl text-white mt-10 mb-5 mx-auto font-display sm:text-3xl md:text-5xl md:mt-5 md:mb-0">
+            <p className="font-extrabold bg-clip-text text-transparent bg-[linear-gradient(to_right,theme(colors.stone.400),theme(colors.zinc.100),theme(colors.zinc.400),theme(colors.zinc.100),theme(colors.stone.400))] bg-[length:200%_auto] animate-gradient">
+              DEVELOPMENT STACK
+            </p>
+          </h1>
+        </div>
+        <div className="logos-container font-mono font-extrabold flex flex-wrap justify-center items-start mt-10 md:mt-20 overflow-hidden">
+          <div className="w-full flex flex-wrap justify-center">
+            {devStack.map((logo, index) => (
+              <Logo
+                className="object-contain mx-auto w-20 h-20 text-center mb-8"
+                key={index}
+                {...logo}
+              />
+            ))}
           </div>
-          <div className="logos-container font-mono font-extrabold flex flex-wrap justify-center items-start mt-10 md:mt-20 overflow-hidden">
-            <div className="w-full flex flex-wrap justify-center">
-              {devStack.map((logo, index) => (
-                <Logo
-                  className="object-contain mx-auto w-20 h-20 text-center mb-8"
-                  key={index}
-                  {...logo}
-                />
-              ))}
-            </div>
-            <div className="w-full flex flex-wrap justify-center">
-              {devStack2.map((logo, index) => (
-                <Logo
-                  className="object-contain mx-auto w-20 h-20 text-center mb-8"
-                  key={index}
-                  {...logo}
-                />
-              ))}
-            </div>
+          <div className="w-full flex flex-wrap justify-center">
+            {devStack2.map((logo, index) => (
+              <Logo
+                className="object-contain mx-auto w-20 h-20 text-center mb-8"
+                key={index}
+                {...logo}
+              />
+            ))}
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
