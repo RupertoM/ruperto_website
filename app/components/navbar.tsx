@@ -4,8 +4,8 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 
 const navigation = [
-  { name: "Skills", href: "/skills" },
-  { name: "Projects", href: "/projects" },
+  { name: "Experience", href: "/experience" },
+  { name: "Interests", href: "/interests" },
   { name: "Resume", href: "/resume" },
 ];
 
@@ -13,7 +13,7 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <nav className="absolute top-10 left-1/2 transform -translate-x-1/2 md:absolute md:top-2 md:right-10 md:mt-6 md:mr-6 md:left-auto md:transform-none">
+    <nav className="absolute top-14 left-1/2 transform -translate-x-1/2 md:absolute md:top-2 md:right-10 md:mt-6 md:mr-6 md:left-auto md:transform-none">
       <ul className="flex items-left justify-left gap-4">
         {navigation.map((item) => (
           <Link
