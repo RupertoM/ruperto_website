@@ -1,58 +1,41 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import axios from "axios";
-import * as cheerio from "cheerio";
 
 export const VerseOfTheDay: React.FC = () => {
   const [verseData, setVerseData] = useState({
-    citation: "",
-    passage: "",
+    text: "",
+    reference: "",
   });
 
   useEffect(() => {
     const fetchVerseOfTheDay = async () => {
-      const URL = "https://www.bible.com/verse-of-the-day";
+      const options = {
+        method: "GET",
+        headers: { accept: "application/json" },
+      };
 
       try {
-        const { data } = await axios.get(URL);
-        const $ = cheerio.load(data);
-
-        const versesArray: string[] = [];
-        const citationsArray: string[] = [];
-
-        const citations = $(".mbs-2");
-        const verses = $("p.text-gray-50");
-
-        await Promise.all(
-          citations
-            .map(async (i, p) => {
-              let citation = $(p).text();
-              citationsArray.push(citation);
-            })
-            .get()
+        const response = await fetch(
+          //Change the end of the url to (/get?format=json&order=daily) for verse of the day
+          "https://beta.ourmanna.com/api/v1/get?format=json&order=random",
+          options
         );
+        const data = await response.json();
 
-        await Promise.all(
-          verses
-            .map(async (i, p) => {
-              let Verse = $(p).text();
-              let reformattedVerse = Verse.replace(/\n/g, " ");
-              versesArray.push(reformattedVerse);
-            })
-            .get()
-        );
+        const verseDetails = data?.verse?.details;
 
         setVerseData({
-          citation: citationsArray[1],
-          passage: versesArray[0],
+          text:
+            verseDetails?.text ||
+            "Trust in the Lord with all your heart and lean not on your own understanding; in all your ways submit to him, and he will make your paths straight.",
+          reference: verseDetails?.reference || "Proverbs 3:5",
         });
       } catch (err) {
         console.error(err);
         setVerseData({
-          citation: "Proverbs 3:5",
-          passage:
-            "Trust in the Lord with all your heart and lean not on your own understanding; in all your ways submit to him, and he will make your paths straight.",
+          text: "Trust in the Lord with all your heart and lean not on your own understanding; in all your ways submit to him, and he will make your paths straight.",
+          reference: "Proverbs 3:5",
         });
       }
     };
@@ -62,8 +45,8 @@ export const VerseOfTheDay: React.FC = () => {
 
   return (
     <div>
-      <h1 className="text-2xl font-bold mb-4">{verseData.citation}</h1>
-      <p className="text-base">{verseData.passage}</p>
+      <h1 className="text-2xl font-bold mb-4">{verseData.reference}</h1>
+      <p className="text-base">{verseData.text}</p>
     </div>
   );
 };
