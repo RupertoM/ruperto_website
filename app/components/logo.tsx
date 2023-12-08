@@ -20,7 +20,7 @@ const Logo: React.FC<LogoProps> = ({
       <img
         src={imgSrc}
         alt={altText}
-        className={`w-10 h-10 md:w-20 md:h-20 mb-5 md:mb-10 ${
+        className={`w-10 h-10 md:w-20 md:h-20 mb-5 md:mb-10 md:transition-transform md:transform-gpu md:hover:scale-125 ${
           isContain ? "object-contain" : "object-cover"
         } mx-auto`}
       />

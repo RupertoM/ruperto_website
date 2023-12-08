@@ -10,7 +10,12 @@ const Experience: React.FC = () => {
       isContain: true,
     },
     { title: "Python", imgSrc: "/Python.svg", altText: "Python Logo" },
-    { title: "Java", imgSrc: "/Java.svg", altText: "Java Logo" },
+    {
+      title: "Java",
+      imgSrc: "/Java.svg",
+      altText: "Java Logo",
+      isContain: true,
+    },
     { title: "Javascript", imgSrc: "/JS.svg", altText: "Javascript Logo" },
     { title: "Typescript", imgSrc: "/TS.svg", altText: "TypeScript Logo" },
     { title: "C", imgSrc: "/C.svg", altText: "C Logo" },
