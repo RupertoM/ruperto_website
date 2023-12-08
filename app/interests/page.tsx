@@ -1,4 +1,5 @@
 import React from "react";
+import { VerseOfTheDay } from "../components/getVerse";
 
 <link
   rel="stylesheet"
@@ -22,10 +23,7 @@ export default function Interests() {
           </div>
           <div className="absolute inset-0 h-full w-full rounded-xl bg-black/80 px-12 text-center text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden]">
             <div className="flex min-h-full flex-col items-center justify-center">
-              <h1 className="text-2xl font-bold mb-4">Verse of the Day</h1>
-              <p className="text-base">
-                Lorem ipsum dolor sit amet consectetur adipisicing.
-              </p>
+              <VerseOfTheDay />
             </div>
           </div>
         </div>
