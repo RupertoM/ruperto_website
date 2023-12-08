@@ -18,7 +18,7 @@ export default function Home() {
         />
       </div>
       <div className="z-10 text-center">
-        <h2 className="flex items-center justify-center mx-2 text-base text-neutral-400">
+        <h2 className="flex items-center justify-center mx-2 text-lg text-neutral-100">
           <TypingText />
         </h2>
       </div>
