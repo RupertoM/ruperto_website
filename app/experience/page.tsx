@@ -55,9 +55,6 @@ const Experience: React.FC = () => {
     { title: "VS Code", imgSrc: "/VSCode.svg", altText: "VSCode Logo" },
     { title: "IntelliJ", imgSrc: "/IntelliJ.png", altText: "IntelliJ Logo" },
     { title: "CLI", imgSrc: "/CLI.svg", altText: "CLI Logo" },
-  ];
-
-  const devStack2 = [
     {
       title: "GitHub",
       imgSrc: "/GitHub.png",
@@ -70,6 +67,9 @@ const Experience: React.FC = () => {
       altText: "GCP Logo",
       isContain: true,
     },
+  ];
+
+  const devStack2 = [
     {
       title: "Confluence",
       imgSrc: "/confluence.svg",
