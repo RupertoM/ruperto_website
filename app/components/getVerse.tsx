@@ -45,8 +45,10 @@ export const VerseOfTheDay: React.FC = () => {
 
   return (
     <div>
-      <h1 className="text-2xl font-bold mb-4">{verseData.reference}</h1>
-      <p className="text-base">{verseData.text}</p>
+      <h1 className="text-lg md:text-2xl font-bold mb-4">
+        {verseData.reference}
+      </h1>
+      <p className="text-sm md:text-base">{verseData.text}</p>
     </div>
   );
 };
