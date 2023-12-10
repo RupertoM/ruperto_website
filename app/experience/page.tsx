@@ -95,7 +95,7 @@ const Experience: React.FC = () => {
             </p>
           </h1>
         </div>
-        <div className="logos-container font-mono font-extrabold flex flex-wrap justify-center items-start mt-10 md:mt-20 overflow-hidden">
+        <div className="logos-container font-mono font-extrabold flex flex-wrap justify-center items-start mt-3 md:mt-20 overflow-hidden">
           <div className="w-full flex flex-wrap justify-center">
             {languages.map((logo, index) => (
               <Logo
@@ -125,7 +125,7 @@ const Experience: React.FC = () => {
             </p>
           </h1>
         </div>
-        <div className="logos-container font-mono font-extrabold flex flex-wrap justify-center items-start mt-10 md:mt-20 overflow-hidden">
+        <div className="logos-container font-mono font-extrabold flex flex-wrap justify-center items-start mt-3 md:mt-20 overflow-hidden">
           <div className="w-full flex flex-wrap justify-center">
             {devStack.map((logo, index) => (
               <Logo
