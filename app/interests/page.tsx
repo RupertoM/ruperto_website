@@ -8,9 +8,9 @@ import { VerseOfTheDay } from "../components/getVerse";
 
 export default function Interests() {
   return (
-    <div className="w-screen h-screen flex items-center justify-center bg-gradient-to-br from-slate-500/10 via-slate-200/25 to-slate-500/10">
-      <div className="w-screen flex justify-evenly">
-        <div className="FAITH mt-[-2rem] group h-96 w-80">
+    <div className="w-screen h-[175vh] md:h-screen flex items-center justify-center bg-gradient-to-br from-slate-500/10 via-slate-200/25 to-slate-500/10">
+      <div className="w-screen flex flex-col items-center gap-y-28 md:gap-y-0 md:flex-row md:justify-evenly">
+        <div className="FAITH md:mt-[-2rem] group h-56 w-72 md:h-96 md:w-80">
           <h1 className="special-font text-2xl text-center font-bold font-dancing-script mb-4">
             Faith
           </h1>
@@ -29,7 +29,7 @@ export default function Interests() {
             </div>
           </div>
         </div>
-        <div className="VOLLEYBALL mt-[-2rem] group h-96 w-80">
+        <div className="VOLLEYBALL md:mt-[-2rem] group h-56 w-72 md:h-96 md:w-80">
           <h1 className="special-font text-2xl text-center font-bold mb-4">
             Volleyball
           </h1>
@@ -51,7 +51,7 @@ export default function Interests() {
             </div>
           </div>
         </div>
-        <div className="TECH mt-[-2rem] group h-96 w-80">
+        <div className="TECH md:mt-[-2rem] group h-56 w-72 md:h-96 md:w-80">
           <h1 className="special-font text-2xl text-center font-bold font-dancing-script mb-4">
             Technology
           </h1>
@@ -73,7 +73,7 @@ export default function Interests() {
             </div>
           </div>
         </div>
-        <div className="TRAVEL mt-[-2rem] group h-96 w-80">
+        <div className="TRAVEL md:mt-[-2rem] group h-56 w-72 md:h-96 md:w-80">
           <h1 className="special-font text-2xl text-center font-bold font-dancing-script mb-4">
             Adventures
           </h1>
