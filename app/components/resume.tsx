@@ -45,7 +45,7 @@ const ResumePDF: React.FC = () => {
       className={`relative xl:w-1/2 md:w-2/3 md:w-4/5 md:h-4/5 rounded-md shadow-md overflow-hidden ${
         isMobile ? "w-[300px] h-[400px]" : "w-full h-full"
       }`}
-      style={{ margin: "4rem 0 0" }}
+      style={{ margin: "2rem 0 0" }}
     >
       <div
         className={`absolute inset-0 ${
