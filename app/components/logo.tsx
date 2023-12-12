@@ -32,7 +32,7 @@ const Logo: React.FC<LogoProps> = ({
 
   return isMobile ? (
     <div className="text-center ml-5 mr-5">
-      <h5 className="text-xl mb-2 md:mb-4">{title}</h5>
+      <h5 className="text-xl text-white mb-2 md:mb-4">{title}</h5>
       <img
         src={imgSrc}
         alt={altText}
@@ -43,7 +43,7 @@ const Logo: React.FC<LogoProps> = ({
     </div>
   ) : (
     <div className="text-center ml-5 mr-5">
-      <h5 className="text-xl mb-2 md:mb-4">{title}</h5>
+      <h5 className="text-xl text-white mb-2 md:mb-4">{title}</h5>
       <img
         src={imgSrc}
         alt={altText}
