@@ -1,5 +1,6 @@
 import React from "react";
 import { VerseOfTheDay } from "../components/getVerse";
+import Image from "next/image";
 
 <link
   rel="stylesheet"
@@ -8,18 +9,20 @@ import { VerseOfTheDay } from "../components/getVerse";
 
 export default function Interests() {
   return (
-    <div className="w-screen h-[175vh] md:h-screen flex items-center justify-center bg-gradient-to-br from-slate-500/10 via-slate-200/25 to-slate-500/10">
-      <div className="w-screen flex flex-col items-center gap-y-28 md:gap-y-0 md:flex-row md:justify-evenly">
-        <div className="FAITH md:mt-[-2rem] group h-56 w-72 md:h-96 md:w-80">
-          <h1 className="special-font text-2xl text-center font-bold font-dancing-script mb-4">
+    <div className="w-screen h-[175vh] md:h-screen flex items-start justify-center md:items-center bg-gradient-to-br from-slate-500/10 via-slate-200/25 to-slate-500/10">
+      <div className="w-screen flex flex-col items-center gap-y-28 mt-2 md:mt-0 md:gap-y-0 md:flex-row md:justify-evenly">
+        <div className="FAITH mt-40 md:mt-[-2rem] group h-56 w-72 md:h-96 md:w-80">
+          <h1 className="special-font text-2xl text-center text-white font-bold font-dancing-script mb-4">
             Faith
           </h1>
           <div className="h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
             <div className="absolute inset-0">
-              <img
+              <Image
                 className="h-full w-full rounded-xl object-cover shadow-xl shadow-black/40"
                 src="/cross.png"
-                alt=""
+                layout="fill"
+                objectFit="cover"
+                alt="Faith Card"
               />
             </div>
             <div className="absolute inset-0 h-full w-full rounded-xl bg-black/80 px-12 text-center text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden]">
@@ -30,15 +33,17 @@ export default function Interests() {
           </div>
         </div>
         <div className="VOLLEYBALL md:mt-[-2rem] group h-56 w-72 md:h-96 md:w-80">
-          <h1 className="special-font text-2xl text-center font-bold mb-4">
+          <h1 className="special-font text-2xl text-center text-white font-bold mb-4">
             Volleyball
           </h1>
           <div className="h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
             <div className="absolute inset-0">
-              <img
+              <Image
                 className="h-full w-full rounded-xl object-cover shadow-xl shadow-black/40"
                 src="/volleyball.png"
-                alt=""
+                layout="fill"
+                objectFit="cover"
+                alt="Volleyball Card"
               />
             </div>
             <div className="absolute inset-0 h-full w-full rounded-xl bg-black/80 px-12 text-center text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden]">
@@ -52,15 +57,17 @@ export default function Interests() {
           </div>
         </div>
         <div className="TECH md:mt-[-2rem] group h-56 w-72 md:h-96 md:w-80">
-          <h1 className="special-font text-2xl text-center font-bold font-dancing-script mb-4">
+          <h1 className="special-font text-2xl text-center text-white font-bold font-dancing-script mb-4">
             Technology
           </h1>
           <div className="h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
             <div className="absolute inset-0">
-              <img
+              <Image
                 className="h-full w-full rounded-xl object-cover shadow-xl shadow-black/40"
                 src="/tech.png"
-                alt=""
+                layout="fill"
+                objectFit="cover"
+                alt="Technology Card"
               />
             </div>
             <div className="absolute inset-0 h-full w-full rounded-xl bg-black/80 px-12 text-center text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden]">
@@ -74,15 +81,17 @@ export default function Interests() {
           </div>
         </div>
         <div className="TRAVEL md:mt-[-2rem] group h-56 w-72 md:h-96 md:w-80">
-          <h1 className="special-font text-2xl text-center font-bold font-dancing-script mb-4">
+          <h1 className="special-font text-2xl text-center text-white font-bold font-dancing-script mb-4">
             Adventures
           </h1>
           <div className="h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
             <div className="absolute inset-0">
-              <img
+              <Image
                 className="h-full w-full rounded-xl object-cover shadow-xl shadow-black/40"
                 src="/travel.png"
-                alt=""
+                layout="fill"
+                objectFit="cover"
+                alt="Adventures Card"
               />
             </div>
             <div className="absolute inset-0 h-full w-full rounded-xl bg-black/80 px-12 text-center text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden]">
