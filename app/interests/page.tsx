@@ -1,7 +1,9 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import { VerseOfTheDay } from "../components/getVerse";
 import VolleyballSlideshow from "../components/vballSlideshow";
-import { Button } from "@mui/material";
+import { Button, Dialog, DialogContent } from "@mui/material";
 
 <link
   rel="stylesheet"
@@ -9,6 +11,12 @@ import { Button } from "@mui/material";
 />;
 
 export default function Interests() {
+  const [openDialog, setOpenDialog] = useState(false);
+
+  const handleToggleDialog = () => {
+    setOpenDialog(!openDialog);
+  };
+
   return (
     <div className="w-screen h-[200vh] md:h-screen flex items-start justify-center md:items-center bg-gradient-to-br from-slate-500/10 via-slate-200/25 to-slate-500/10">
       <div className="w-screen flex flex-col items-center gap-y-28 mt-2 md:mt-0 md:gap-y-0 md:flex-row md:justify-evenly">
@@ -70,6 +78,7 @@ export default function Interests() {
                     borderColor: "white",
                   }}
                   className="hidden md:block mt-6 transition duration-300 ease-in-out hover:text-black hover:bg-white"
+                  onClick={handleToggleDialog}
                 >
                   Photo Gallery
                 </Button>
@@ -122,6 +131,22 @@ export default function Interests() {
           </div>
         </div>
       </div>
+      <Dialog open={openDialog} onClose={handleToggleDialog}>
+        <DialogContent
+          sx={{
+            width: "30vw",
+            height: "75vh",
+            backgroundColor: "black",
+            overflow: "hidden",
+            "@media (max-width: 1024px)": {
+              width: "70vw", // Adjusted width for screens up to 600px width
+              height: "40vh", // Adjusted height for screens up to 600px width
+            },
+          }}
+        >
+          <VolleyballSlideshow />
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }

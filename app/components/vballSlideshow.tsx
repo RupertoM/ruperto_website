@@ -5,20 +5,32 @@ import React, { useState, useEffect } from "react";
 const VolleyballSlideshow: React.FC = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  const images = ["/Angular.svg", "/tarheel.png", "/GitHub.png"]; // Update with your actual image links
+  const images = [
+    "/ball4.png",
+    "/ball5.png",
+    "/ball2.png",
+    "/ball1.png",
+    "/ball3.png",
+    "/ball6.png",
+    "/ball7.png",
+    "/ball9.png",
+    "/ball8.png",
+    "/ball11.png",
+    "/ball10.png",
+  ];
 
   const updateImage = () => {
     setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
   };
 
   useEffect(() => {
-    const intervalId = setInterval(updateImage, 2500);
+    const intervalId = setInterval(updateImage, 2000);
 
     return () => clearInterval(intervalId);
   }, []);
 
   return (
-    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+    <div className="w-full h-full flex items-center justify-center overflow-hidden">
       <img
         className="object-cover w-full h-full"
         src={images[currentImageIndex]}
