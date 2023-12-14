@@ -149,9 +149,9 @@ export default function Interests() {
                 alt=""
               />
             </div>
-            <div className="absolute inset-0 h-full w-full rounded-xl bg-black/80 px-12 text-center text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden]">
+            <div className="absolute inset-0 h-full w-full rounded-xl bg-black/80 px-6 md:px-12 text-center text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden]">
               <div className="flex min-h-full flex-col items-center justify-center">
-                <p className="text-base mb-6">
+                <p className="text-sm md:text-base mb-6">
                   Click below to checkout my photos; capturing hobbies, friends,
                   and travel. It's a glimpse into the things that truly matter,
                   highlighting the joy of relationships, my passions in life,
@@ -163,7 +163,7 @@ export default function Interests() {
                     color: "white",
                     borderColor: "white",
                   }}
-                  className="hidden md:block mt-6 transition duration-300 ease-in-out hover:text-black hover:bg-white"
+                  className="mt-0 md:mt-6 transition duration-300 ease-in-out hover:text-black hover:bg-white"
                   onClick={() => handleToggleDialog(adventureImages)}
                 >
                   Photo Gallery
