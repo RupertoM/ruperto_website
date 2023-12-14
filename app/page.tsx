@@ -5,7 +5,7 @@ import TypingText from "./components/TypingText";
 export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-bl from-black via-slate-500/25 to-black">
-      <h1 className="text-xl text-white mb-8 font-display sm:text-2xl md:text-4xl font-bold">
+      <h1 className="text-4xl text-white mb-8 font-display sm:text-2xl md:text-4xl font-bold">
         Ruperto Martinez
       </h1>
       <Particles className="absolute inset-0 -z-10" amount={75} />
