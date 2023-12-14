@@ -86,7 +86,7 @@ export default function Interests() {
                   Indoor Volleyball
                 </h1>
                 <ul className="text-small md:text-base list-disc">
-                  <li>UNC Men's Outside Hitter</li>
+                  <li>UNC Men&apos;s Outside Hitter</li>
                   <li>NCVF National Tournaments</li>
                   <li>ECVA Regional Tournaments</li>
                 </ul>
@@ -153,9 +153,9 @@ export default function Interests() {
               <div className="flex min-h-full flex-col items-center justify-center">
                 <p className="text-sm md:text-base mb-6">
                   Click below to checkout my photos; capturing hobbies, friends,
-                  and travel. It's a glimpse into the things that truly matter,
-                  highlighting the joy of relationships, my passions in life,
-                  and the thrill of exploration.
+                  and travel. It&apos;s a glimpse into the things that truly
+                  matter, highlighting the joy of relationships, my passions in
+                  life, and the thrill of exploration.
                 </p>
                 <Button
                   variant="outlined"
