@@ -103,10 +103,22 @@ export default function Interests() {
                 <Button
                   variant="outlined"
                   sx={{
+                    display: "none",
+                    "@media (min-width: 768px)": {
+                      display: "block",
+                    },
+                    marginTop: "1.5rem",
+                    transition:
+                      "color 300ms ease-in-out, background-color 300ms ease-in-out",
+                    "&:hover": {
+                      color: "black",
+                      backgroundColor: "white",
+                      borderColor: "white",
+                      outline: "none",
+                    },
                     color: "white",
                     borderColor: "white",
                   }}
-                  className="hidden md:block mt-6 transition duration-300 ease-in-out hover:text-black hover:bg-white"
                   onClick={() => handleToggleDialog(volleyballImages)}
                 >
                   Photo Gallery
@@ -160,10 +172,20 @@ export default function Interests() {
                 <Button
                   variant="outlined"
                   sx={{
+                    "@media (min-width: 768px)": {
+                      marginTop: "1.5rem",
+                    },
+                    transition:
+                      "color 300ms ease-in-out, background-color 300ms ease-in-out",
+                    "&:hover": {
+                      color: "black",
+                      backgroundColor: "white",
+                      borderColor: "white",
+                      outline: "none",
+                    },
                     color: "white",
                     borderColor: "white",
                   }}
-                  className="mt-0 md:mt-6 transition duration-300 ease-in-out hover:text-black hover:bg-white"
                   onClick={() => handleToggleDialog(adventureImages)}
                 >
                   Photo Gallery
