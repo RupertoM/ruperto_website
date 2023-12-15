@@ -30,7 +30,7 @@ export default function Home() {
       >
         Ruperto Martinez
       </motion.h1>
-      <Particles className="absolute inset-0 -z-10" amount={75} />
+      <Particles className="absolute inset-0 -z-10" amount={100} />
       <motion.div
         variants={{
           hidden: { opacity: 0 },
