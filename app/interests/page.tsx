@@ -188,7 +188,7 @@ export default function Interests() {
                 alt=""
               />
             </div>
-            <div className="absolute inset-0 h-full w-full rounded-xl bg-black/80 px-6 md:px-12 text-center text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden]">
+            <div className="absolute inset-0 h-full w-full rounded-xl bg-black/80 px-6 md:px-10 text-center text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden]">
               <div className="flex min-h-full flex-col items-center justify-center">
                 <p className="text-sm md:text-base mb-6">
                   Click below to checkout my photos; capturing hobbies, friends,
