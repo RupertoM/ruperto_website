@@ -3,7 +3,15 @@
 import React, { useState } from "react";
 import { VerseOfTheDay } from "../components/getVerse";
 import Slideshow from "../components/Slideshow";
-import { Button, Dialog, DialogContent } from "@mui/material";
+import { Button, Dialog, DialogContent, Icon } from "@mui/material";
+import {
+  Code,
+  Whatshot,
+  EmojiPeople,
+  Psychology,
+  SmartToy,
+  Extension,
+} from "@mui/icons-material";
 
 <link
   rel="stylesheet"
@@ -139,12 +147,31 @@ export default function Interests() {
                 alt=""
               />
             </div>
-            <div className="absolute inset-0 h-full w-full rounded-xl bg-black/80 px-12 text-center text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden]">
+            <div className="absolute inset-0 h-full w-full rounded-xl bg-black/80 px-6 text-center text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden]">
               <div className="flex min-h-full flex-col items-center justify-center">
-                <h1 className="text-2xl font-bold mb-4">Verse of the Day</h1>
-                <p className="text-base">
-                  Lorem ipsum dolor sit amet consectetur adipisicing.
-                </p>
+                <h1 className="text-xl md:text-3xl font-bold mb-3 md:mb-8">
+                  Topics of Affinity
+                </h1>
+                <div className="space-y-1 md:space-y-3">
+                  <p className="text-sm md:text-base">
+                    <Icon component={Code} /> Full Stack Development
+                  </p>
+                  <p className="text-sm md:text-base">
+                    <Icon component={Whatshot} /> Bleeding Edge Technologies
+                  </p>
+                  <p className="text-sm md:text-base">
+                    <Icon component={EmojiPeople} /> The Metaverse
+                  </p>
+                  <p className="text-sm md:text-base">
+                    <Icon component={Psychology} /> Artificial Intelligence
+                  </p>
+                  <p className="text-sm md:text-base">
+                    <Icon component={SmartToy} /> Robotics and Automation
+                  </p>
+                  <p className="text-sm md:text-base">
+                    <Icon component={Extension} /> Technical Innovations
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -161,7 +188,7 @@ export default function Interests() {
                 alt=""
               />
             </div>
-            <div className="absolute inset-0 h-full w-full rounded-xl bg-black/80 px-6 md:px-12 text-center text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden]">
+            <div className="absolute inset-0 h-full w-full rounded-xl bg-black/80 px-6 md:px-10 text-center text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden]">
               <div className="flex min-h-full flex-col items-center justify-center">
                 <p className="text-sm md:text-base mb-6">
                   Click below to checkout my photos; capturing hobbies, friends,
