@@ -55,9 +55,9 @@ export default function Interests() {
   ];
 
   return (
-    <div className="w-screen h-[200vh] md:h-screen flex items-start justify-center md:items-center bg-gradient-to-br from-slate-500/10 via-slate-200/25 to-slate-500/10">
+    <div className="w-screen h-[180vh] md:h-screen flex items-start justify-center md:items-center bg-gradient-to-br from-slate-500/10 via-slate-200/25 to-slate-500/10">
       <div className="w-screen flex flex-col items-center gap-y-28 mt-2 md:mt-0 md:gap-y-0 md:flex-row md:justify-evenly">
-        <div className="FAITH mt-40 md:mt-[-2rem] group h-56 w-72 md:h-96 md:w-80">
+        <div className="FAITH mt-28 md:mt-[-2rem] group h-56 w-72 md:h-96 md:w-80">
           <h1 className="special-font text-2xl text-center text-white font-bold font-dancing-script mb-4">
             Faith
           </h1>

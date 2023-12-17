@@ -13,7 +13,13 @@ const BackIcon: React.FC = () => {
     <div className="absolute">
       <Link href="/">
         <KeyboardBackspaceIcon
-          style={{
+          sx={{
+            "@media (max-width: 768px)": {
+              fontSize: 30,
+              color: "white",
+              marginLeft: "0.75rem",
+              marginTop: "0.75rem",
+            },
             fontSize: 40,
             color: "white",
             marginLeft: "1.5rem",

@@ -108,7 +108,7 @@ const Experience: React.FC = () => {
     <div className="snap-y snap-mandatory h-screen overflow-auto overflow-x-hidden">
       <div className="snap-center w-screen h-screen overflow-hidden bg-gradient-to-br from-slate-500/10 via-slate-200/25 to-slate-500/10">
         <div className="flex flex-col items-center justify-center ">
-          <h1 className="text-2xl text-white mt-28 mb-5 mx-auto font-display sm:text-3xl md:text-5xl md:mt-20 md:mb-0">
+          <h1 className="text-2xl text-white mt-20 mb-5 mx-auto font-display sm:text-3xl md:text-5xl md:mt-20 md:mb-0">
             <p className="font-extrabold bg-clip-text text-transparent bg-[linear-gradient(to_right,theme(colors.stone.400),theme(colors.zinc.100),theme(colors.zinc.400),theme(colors.zinc.100),theme(colors.stone.400))] bg-[length:200%_auto] animate-gradient">
               PROGRAMMING STACK
             </p>
@@ -161,7 +161,7 @@ const Experience: React.FC = () => {
         </div>
         <div className="flex justify-center">
           <KeyboardArrowDownIcon
-            className="mt-16"
+            className="mt-8 md:mt-16"
             style={{ fontSize: "4rem", color: "white" }}
           />
         </div>
@@ -169,7 +169,7 @@ const Experience: React.FC = () => {
 
       <div className="snap-center w-screen h-screen overflow-hidden bg-gradient-to-br from-slate-500/10 via-slate-200/25 to-slate-500/10">
         <div className="flex flex-col items-start justify-start">
-          <h1 className="text-2xl text-white mt-28 mb-5 mx-auto font-display sm:text-3xl md:text-5xl md:mt-20 md:mb-0">
+          <h1 className="text-2xl text-white mt-20 mb-5 mx-auto font-display sm:text-3xl md:text-5xl md:mt-20 md:mb-0">
             <p className="font-extrabold bg-clip-text text-transparent bg-[linear-gradient(to_right,theme(colors.stone.400),theme(colors.zinc.100),theme(colors.zinc.400),theme(colors.zinc.100),theme(colors.stone.400))] bg-[length:200%_auto] animate-gradient">
               DEVELOPMENT STACK
             </p>
@@ -197,7 +197,7 @@ const Experience: React.FC = () => {
         </div>
         <div className="flex justify-center">
           <KeyboardArrowDownIcon
-            className="mt-16"
+            className="mt-4 md:mt-16"
             style={{ fontSize: "4rem", color: "white" }}
           />
         </div>
