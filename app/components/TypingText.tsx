@@ -20,9 +20,10 @@ const TypingText: React.FC<TypingTextProps> = () => {
 
     const options = {
       strings: defaultStrings,
-      typeSpeed: 40,
+      typeSpeed: 30,
       backSpeed: 30,
-      backDelay: 2000,
+      backDelay: 3000,
+      startDelay: 1200,
       showCursor: true,
       loop: true,
       loopCount: Infinity,

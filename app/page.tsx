@@ -1,27 +1,66 @@
-import Link from "next/link";
+"use client";
+
 import React from "react";
+import { motion, useAnimation } from "framer-motion";
 import Particles from "./components/particles";
 import TypingText from "./components/TypingText";
 
 export default function Home() {
+  const controls = useAnimation();
+
+  const startAnimations = async () => {
+    await controls.start("visible");
+  };
+
+  React.useEffect(() => {
+    startAnimations();
+  }, []);
+
   return (
     <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-bl from-black via-slate-500/25 to-black">
-      <h1 className="text-xl text-white mb-8 font-display sm:text-2xl md:text-4xl font-bold">
+      <motion.h1
+        className="text-4xl text-white mb-8 font-display sm:text-2xl md:text-4xl font-bold"
+        variants={{
+          hidden: { x: "100vw" },
+          visible: { x: 0 },
+        }}
+        initial="hidden"
+        animate={controls}
+        transition={{ duration: 2.5 }}
+      >
         Ruperto Martinez
-      </h1>
-      <Particles className="absolute inset-0 -z-10" amount={75} />
-      <div>
+      </motion.h1>
+      <Particles className="absolute inset-0 -z-10" amount={100} />
+      <motion.div
+        variants={{
+          hidden: { opacity: 0 },
+          visible: { opacity: 1 },
+        }}
+        initial="hidden"
+        animate={controls}
+        transition={{ duration: 4, delay: 3 }}
+        className="mb-8"
+      >
         <img
           src="/personal_photo.png"
           alt="Profile Picture"
-          className="rounded-full w-40 h-40 object-cover mb-8"
+          className="rounded-full w-40 h-40 object-cover"
         />
-      </div>
-      <div className="z-10 text-center">
+      </motion.div>
+      <motion.div
+        className="z-10 text-center"
+        variants={{
+          hidden: { x: "-100vw" },
+          visible: { x: 0 },
+        }}
+        initial="hidden"
+        animate={controls}
+        transition={{ duration: 2, delay: 1 }}
+      >
         <h2 className="flex items-center justify-center mx-2 text-lg text-neutral-100">
           <TypingText />
         </h2>
-      </div>
+      </motion.div>
     </div>
   );
 }

@@ -13,7 +13,7 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <nav className="absolute top-14 left-1/2 transform -translate-x-1/2 md:absolute md:top-2 md:right-10 md:mt-6 md:mr-6 md:left-auto md:transform-none">
+    <nav className="h-16 absolute top-14 left-1/2 transform mb-10 -translate-x-1/2 md:absolute md:top-2 md:right-10 md:mt-6 md:mr-6 md:left-auto md:transform-none">
       <ul className="flex items-left justify-left gap-4">
         {navigation.map((item) => (
           <Link

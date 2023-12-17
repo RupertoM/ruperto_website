@@ -64,9 +64,6 @@ const Experience: React.FC = () => {
     { title: "VS Code", imgSrc: "/VSCode.svg", altText: "VSCode Logo" },
     { title: "IntelliJ", imgSrc: "/IntelliJ.png", altText: "IntelliJ Logo" },
     { title: "CLI", imgSrc: "/CLI.svg", altText: "CLI Logo" },
-  ];
-
-  const devStack2 = [
     {
       title: "GitHub",
       imgSrc: "/GitHub.png",
@@ -79,6 +76,9 @@ const Experience: React.FC = () => {
       altText: "GCP Logo",
       isContain: true,
     },
+  ];
+
+  const devStack2 = [
     {
       title: "Confluence",
       imgSrc: "/confluence.svg",
@@ -105,16 +105,16 @@ const Experience: React.FC = () => {
   }, []);
 
   return (
-    <div className="snap-y snap-mandatory h-screen w-screen overflow-scroll">
+    <div className="snap-y snap-mandatory h-screen overflow-auto overflow-x-hidden">
       <div className="snap-center w-screen h-screen overflow-hidden bg-gradient-to-br from-slate-500/10 via-slate-200/25 to-slate-500/10">
-        <div className="flex flex-col items-start justify-start">
+        <div className="flex flex-col items-center justify-center ">
           <h1 className="text-2xl text-white mt-28 mb-5 mx-auto font-display sm:text-3xl md:text-5xl md:mt-20 md:mb-0">
             <p className="font-extrabold bg-clip-text text-transparent bg-[linear-gradient(to_right,theme(colors.stone.400),theme(colors.zinc.100),theme(colors.zinc.400),theme(colors.zinc.100),theme(colors.stone.400))] bg-[length:200%_auto] animate-gradient">
               PROGRAMMING STACK
             </p>
           </h1>
         </div>
-        <div className="logos-container font-mono font-extrabold flex flex-wrap justify-center items-start mt-10 md:mt-20 overflow-hidden">
+        <div className="logos-container font-mono font-extrabold flex-row flex-wrap justify-center items-center mt-3 md:mt-20 2xl:mt-44 overflow-hidden">
           <div className="w-full flex flex-wrap justify-center">
             {languages.map((logo, index) => (
               <motion.div
@@ -172,7 +172,7 @@ const Experience: React.FC = () => {
             </p>
           </h1>
         </div>
-        <div className="logos-container font-mono font-extrabold flex flex-wrap justify-center items-start mt-10 md:mt-20 overflow-hidden">
+        <div className="logos-container font-mono font-extrabold flex flex-wrap justify-center items-start mt-3 md:mt-20 2xl:mt-44 overflow-hidden">
           <div className="w-full flex flex-wrap justify-center">
             {devStack.map((logo, index) => (
               <Logo
