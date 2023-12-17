@@ -160,7 +160,10 @@ const Experience: React.FC = () => {
           </div>
         </div>
         <div className="flex justify-center">
-          <KeyboardArrowDownIcon className="mt-16 text-white text-6xl" />
+          <KeyboardArrowDownIcon
+            className="mt-16"
+            style={{ fontSize: "4rem", color: "white" }}
+          />
         </div>
       </div>
 
@@ -193,7 +196,10 @@ const Experience: React.FC = () => {
           </div>
         </div>
         <div className="flex justify-center">
-          <KeyboardArrowDownIcon className="mt-16 text-white text-6xl" />
+          <KeyboardArrowDownIcon
+            className="mt-16"
+            style={{ fontSize: "4rem", color: "white" }}
+          />
         </div>
       </div>
     </div>
