@@ -1,5 +1,9 @@
+"use client";
+
 import React from "react";
 import Logo from "../components/logo";
+import { motion, useAnimation } from "framer-motion";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
 const Experience: React.FC = () => {
   const languages = [
@@ -18,7 +22,7 @@ const Experience: React.FC = () => {
     },
     { title: "Javascript", imgSrc: "/JS.svg", altText: "Javascript Logo" },
     { title: "Typescript", imgSrc: "/TS.svg", altText: "TypeScript Logo" },
-    { title: "C", imgSrc: "/C.svg", altText: "C Logo" },
+    { title: "C", imgSrc: "/C.svg", altText: "C Logo", isContain: true },
     { title: "MatLab", imgSrc: "/MatLab.png", altText: "MatLab Logo" },
     { title: "HTML5", imgSrc: "/HTML5.svg", altText: "HTML5 Logo" },
     { title: "CSS", imgSrc: "/CSS3.svg", altText: "CSS Logo" },
@@ -27,7 +31,12 @@ const Experience: React.FC = () => {
     { title: "SQL", imgSrc: "/SQL.svg", altText: "SQL Logo" },
     { title: "NoSQL", imgSrc: "/NoSQL.png", altText: "NoSQL Logo" },
     { title: "React", imgSrc: "/React.svg", altText: "React Logo" },
-    { title: "Angular", imgSrc: "/Angular.svg", altText: "Angular Logo" },
+    {
+      title: "Angular",
+      imgSrc: "/Angular.svg",
+      altText: "Angular Logo",
+      isContain: true,
+    },
     { title: "Spring Boot", imgSrc: "/Spring.svg", altText: "Spring Logo" },
     { title: "NextJS", imgSrc: "/NextJS.svg", altText: "NextJS Logo" },
     {
@@ -85,6 +94,16 @@ const Experience: React.FC = () => {
     },
   ];
 
+  const controls = useAnimation();
+
+  const startAnimations = async () => {
+    await controls.start("visible");
+  };
+
+  React.useEffect(() => {
+    startAnimations();
+  }, []);
+
   return (
     <div className="snap-y snap-mandatory h-screen overflow-auto overflow-x-hidden">
       <div className="snap-center w-screen h-screen overflow-hidden bg-gradient-to-br from-slate-500/10 via-slate-200/25 to-slate-500/10">
@@ -98,22 +117,53 @@ const Experience: React.FC = () => {
         <div className="logos-container font-mono font-extrabold flex-row flex-wrap justify-center items-center mt-3 md:mt-20 2xl:mt-44 overflow-hidden">
           <div className="w-full flex flex-wrap justify-center">
             {languages.map((logo, index) => (
-              <Logo
-                className="object-contain mx-auto w-20 h-20 text-center mb-8"
+              <motion.div
                 key={index}
-                {...logo}
-              />
+                variants={{
+                  hidden: { x: "-100vw" },
+                  visible: { x: 0 },
+                }}
+                initial="hidden"
+                animate={controls}
+                transition={{
+                  duration: 1,
+                  delay: (languages.length - 1 - index) * 0.25,
+                }}
+              >
+                <Logo
+                  className="object-contain mx-auto w-20 h-20 text-center mb-8"
+                  key={index}
+                  {...logo}
+                />
+              </motion.div>
             ))}
           </div>
           <div className="w-full flex flex-wrap justify-center">
             {libraries.map((logo, index) => (
-              <Logo
-                className="object-contain mx-auto w-20 h-20 text-center mb-8"
+              <motion.div
                 key={index}
-                {...logo}
-              />
+                variants={{
+                  hidden: { x: "100vw" },
+                  visible: { x: 0 },
+                }}
+                initial="hidden"
+                animate={controls}
+                transition={{ duration: 1, delay: index * 0.35 }}
+              >
+                <Logo
+                  className="object-contain mx-auto w-20 h-20 text-center mb-8"
+                  key={index}
+                  {...logo}
+                />
+              </motion.div>
             ))}
           </div>
+        </div>
+        <div className="flex justify-center">
+          <KeyboardArrowDownIcon
+            className="mt-16"
+            style={{ fontSize: "4rem", color: "white" }}
+          />
         </div>
       </div>
 
@@ -144,6 +194,12 @@ const Experience: React.FC = () => {
               />
             ))}
           </div>
+        </div>
+        <div className="flex justify-center">
+          <KeyboardArrowDownIcon
+            className="mt-16"
+            style={{ fontSize: "4rem", color: "white" }}
+          />
         </div>
       </div>
     </div>
