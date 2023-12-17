@@ -55,6 +55,12 @@ const Experience: React.FC = () => {
       altText: "GKE Logo",
     },
     {
+      title: "Google Cloud",
+      imgSrc: "/GCP.png",
+      altText: "GCP Logo",
+      isContain: true,
+    },
+    {
       title: "Docker",
       imgSrc: "/Docker.png",
       altText: "Docker Logo",
@@ -63,19 +69,6 @@ const Experience: React.FC = () => {
     { title: "Material UI", imgSrc: "/MUI.png", altText: "MUI Logo" },
     { title: "VS Code", imgSrc: "/VSCode.svg", altText: "VSCode Logo" },
     { title: "IntelliJ", imgSrc: "/IntelliJ.png", altText: "IntelliJ Logo" },
-    { title: "CLI", imgSrc: "/CLI.svg", altText: "CLI Logo" },
-    {
-      title: "GitHub",
-      imgSrc: "/GitHub.png",
-      altText: "GitHub Logo",
-      isContain: true,
-    },
-    {
-      title: "Google Cloud",
-      imgSrc: "/GCP.png",
-      altText: "GCP Logo",
-      isContain: true,
-    },
   ];
 
   const devStack2 = [
@@ -88,10 +81,17 @@ const Experience: React.FC = () => {
     { title: "VertexAI", imgSrc: "/vertexai.svg", altText: "VertexAI Logo" },
     { title: "ChatGPT", imgSrc: "/chatgpt.png", altText: "ChatGPT Logo" },
     {
+      title: "GitHub",
+      imgSrc: "/GitHub.png",
+      altText: "GitHub Logo",
+      isContain: true,
+    },
+    {
       title: "GitHub Actions",
       imgSrc: "/GitHub-Actions.png",
       altText: "GitHub Actions Logo",
     },
+    { title: "CLI", imgSrc: "/CLI.svg", altText: "CLI Logo" },
   ];
 
   const controls = useAnimation();
@@ -161,7 +161,7 @@ const Experience: React.FC = () => {
         </div>
         <div className="flex justify-center">
           <KeyboardArrowDownIcon
-            className="mt-8 md:mt-16"
+            className="mt-4 md:mt-16"
             style={{ fontSize: "4rem", color: "white" }}
           />
         </div>
