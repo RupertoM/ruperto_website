@@ -106,9 +106,9 @@ const Experience: React.FC = () => {
 
   return (
     <div className="snap-y snap-mandatory h-screen overflow-auto overflow-x-hidden">
-      <div className="snap-center w-screen h-screen overflow-hidden bg-gradient-to-br from-slate-500/10 via-slate-200/25 to-slate-500/10">
-        <div className="flex flex-col items-center justify-center ">
-          <h1 className="text-2xl text-white mt-20 mb-5 mx-auto font-display sm:text-3xl md:text-5xl md:mt-20 md:mb-0">
+      <div className="snap-center w-[100vw] h-[100vh] overflow-hidden bg-gradient-to-br from-slate-500/10 via-slate-200/25 to-slate-500/10">
+        <div className="flex flex-col items-center justify-center overflow-hidden">
+          <h1 className="text-2xl text-white mt-28 mb-5 mx-auto font-display sm:text-3xl md:text-5xl md:mt-20 md:mb-0">
             <p className="font-extrabold bg-clip-text text-transparent bg-[linear-gradient(to_right,theme(colors.stone.400),theme(colors.zinc.100),theme(colors.zinc.400),theme(colors.zinc.100),theme(colors.stone.400))] bg-[length:200%_auto] animate-gradient">
               PROGRAMMING STACK
             </p>
@@ -167,9 +167,9 @@ const Experience: React.FC = () => {
         </div>
       </div>
 
-      <div className="snap-center w-screen h-screen overflow-hidden bg-gradient-to-br from-slate-500/10 via-slate-200/25 to-slate-500/10">
-        <div className="flex flex-col items-start justify-start">
-          <h1 className="text-2xl text-white mt-20 mb-5 mx-auto font-display sm:text-3xl md:text-5xl md:mt-20 md:mb-0">
+      <div className="snap-center w-[100vw] h-[100vh] overflow-hidden bg-gradient-to-br from-slate-500/10 via-slate-200/25 to-slate-500/10">
+        <div className="flex flex-col items-start justify-start overflow-hidden">
+          <h1 className="text-2xl text-white mt-28 mb-5 mx-auto font-display sm:text-3xl md:text-5xl md:mt-20 md:mb-0">
             <p className="font-extrabold bg-clip-text text-transparent bg-[linear-gradient(to_right,theme(colors.stone.400),theme(colors.zinc.100),theme(colors.zinc.400),theme(colors.zinc.100),theme(colors.stone.400))] bg-[length:200%_auto] animate-gradient">
               DEVELOPMENT STACK
             </p>
