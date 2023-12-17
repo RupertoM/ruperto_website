@@ -55,6 +55,12 @@ const Experience: React.FC = () => {
       altText: "GKE Logo",
     },
     {
+      title: "Google Cloud",
+      imgSrc: "/GCP.png",
+      altText: "GCP Logo",
+      isContain: true,
+    },
+    {
       title: "Docker",
       imgSrc: "/Docker.png",
       altText: "Docker Logo",
@@ -63,19 +69,6 @@ const Experience: React.FC = () => {
     { title: "Material UI", imgSrc: "/MUI.png", altText: "MUI Logo" },
     { title: "VS Code", imgSrc: "/VSCode.svg", altText: "VSCode Logo" },
     { title: "IntelliJ", imgSrc: "/IntelliJ.png", altText: "IntelliJ Logo" },
-    { title: "CLI", imgSrc: "/CLI.svg", altText: "CLI Logo" },
-    {
-      title: "GitHub",
-      imgSrc: "/GitHub.png",
-      altText: "GitHub Logo",
-      isContain: true,
-    },
-    {
-      title: "Google Cloud",
-      imgSrc: "/GCP.png",
-      altText: "GCP Logo",
-      isContain: true,
-    },
   ];
 
   const devStack2 = [
@@ -88,10 +81,17 @@ const Experience: React.FC = () => {
     { title: "VertexAI", imgSrc: "/vertexai.svg", altText: "VertexAI Logo" },
     { title: "ChatGPT", imgSrc: "/chatgpt.png", altText: "ChatGPT Logo" },
     {
+      title: "GitHub",
+      imgSrc: "/GitHub.png",
+      altText: "GitHub Logo",
+      isContain: true,
+    },
+    {
       title: "GitHub Actions",
       imgSrc: "/GitHub-Actions.png",
       altText: "GitHub Actions Logo",
     },
+    { title: "CLI", imgSrc: "/CLI.svg", altText: "CLI Logo" },
   ];
 
   const controls = useAnimation();
@@ -106,15 +106,15 @@ const Experience: React.FC = () => {
 
   return (
     <div className="snap-y snap-mandatory h-screen overflow-auto overflow-x-hidden">
-      <div className="snap-center w-screen h-screen overflow-hidden bg-gradient-to-br from-slate-500/10 via-slate-200/25 to-slate-500/10">
-        <div className="flex flex-col items-center justify-center ">
-          <h1 className="text-2xl text-white mt-28 mb-5 mx-auto font-display sm:text-3xl md:text-5xl md:mt-20 md:mb-0">
+      <div className="snap-center w-[100vw] h-[100vh] overflow-hidden bg-gradient-to-br from-slate-500/10 via-slate-200/25 to-slate-500/10">
+        <div className="flex flex-col items-center justify-center overflow-hidden">
+          <h1 className="text-3xl text-white mt-24 mb-5 mx-auto font-display sm:text-3xl md:text-5xl md:mt-20 md:mb-0">
             <p className="font-extrabold bg-clip-text text-transparent bg-[linear-gradient(to_right,theme(colors.stone.400),theme(colors.zinc.100),theme(colors.zinc.400),theme(colors.zinc.100),theme(colors.stone.400))] bg-[length:200%_auto] animate-gradient">
               PROGRAMMING STACK
             </p>
           </h1>
         </div>
-        <div className="logos-container font-mono font-extrabold flex-row flex-wrap justify-center items-center mt-3 md:mt-20 2xl:mt-44 overflow-hidden">
+        <div className="logos-container font-mono font-extrabold flex-row flex-wrap justify-center items-center mt-7 md:mt-20 2xl:mt-44 overflow-hidden">
           <div className="w-full flex flex-wrap justify-center">
             {languages.map((logo, index) => (
               <motion.div
@@ -161,21 +161,21 @@ const Experience: React.FC = () => {
         </div>
         <div className="flex justify-center">
           <KeyboardArrowDownIcon
-            className="mt-16"
+            className="mt-24 md:mt-16"
             style={{ fontSize: "4rem", color: "white" }}
           />
         </div>
       </div>
 
-      <div className="snap-center w-screen h-screen overflow-hidden bg-gradient-to-br from-slate-500/10 via-slate-200/25 to-slate-500/10">
-        <div className="flex flex-col items-start justify-start">
-          <h1 className="text-2xl text-white mt-28 mb-5 mx-auto font-display sm:text-3xl md:text-5xl md:mt-20 md:mb-0">
+      <div className="snap-center w-[100vw] h-[100vh] overflow-hidden bg-gradient-to-br from-slate-500/10 via-slate-200/25 to-slate-500/10">
+        <div className="flex flex-col items-start justify-start overflow-hidden">
+          <h1 className="text-3xl text-white mt-24 mb-5 mx-auto font-display sm:text-3xl md:text-5xl md:mt-20 md:mb-0">
             <p className="font-extrabold bg-clip-text text-transparent bg-[linear-gradient(to_right,theme(colors.stone.400),theme(colors.zinc.100),theme(colors.zinc.400),theme(colors.zinc.100),theme(colors.stone.400))] bg-[length:200%_auto] animate-gradient">
               DEVELOPMENT STACK
             </p>
           </h1>
         </div>
-        <div className="logos-container font-mono font-extrabold flex flex-wrap justify-center items-start mt-3 md:mt-20 2xl:mt-44 overflow-hidden">
+        <div className="logos-container font-mono font-extrabold flex flex-wrap justify-center items-start mt-7 md:mt-20 2xl:mt-44 overflow-hidden">
           <div className="w-full flex flex-wrap justify-center">
             {devStack.map((logo, index) => (
               <Logo
@@ -197,7 +197,7 @@ const Experience: React.FC = () => {
         </div>
         <div className="flex justify-center">
           <KeyboardArrowDownIcon
-            className="mt-16"
+            className="mt-4 md:mt-16"
             style={{ fontSize: "4rem", color: "white" }}
           />
         </div>

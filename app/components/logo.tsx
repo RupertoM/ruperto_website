@@ -31,8 +31,8 @@ const Logo: React.FC<LogoProps> = ({
   }, []);
 
   return isMobile ? (
-    <div className="text-center ml-5 mr-5">
-      <h5 className="text-xl text-white mb-2 md:mb-4">{title}</h5>
+    <div className="text-center ml-2 mr-2">
+      <h5 className="text-lg text-white mb-2 md:mb-4">{title}</h5>
       <img
         src={imgSrc}
         alt={altText}
