@@ -4,6 +4,7 @@ import React from "react";
 import Logo from "../components/logo";
 import { motion, useAnimation } from "framer-motion";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import Courses from "../components/courses";
 
 const Experience: React.FC = () => {
   const languages = [
@@ -194,6 +195,25 @@ const Experience: React.FC = () => {
               />
             ))}
           </div>
+        </div>
+        <div className="flex justify-center">
+          <KeyboardArrowDownIcon
+            className="mt-4 md:mt-16"
+            style={{ fontSize: "4rem", color: "white" }}
+          />
+        </div>
+      </div>
+
+      <div className="snap-center w-[100vw] h-[100vh] overflow-hidden bg-gradient-to-br from-slate-500/10 via-slate-200/25 to-slate-500/10">
+        <div className="flex flex-col items-start justify-start overflow-hidden">
+          <h1 className="text-3xl text-white mt-24 mb-5 mx-auto font-display sm:text-3xl md:text-5xl md:mt-20 md:mb-0">
+            <p className="font-extrabold bg-clip-text text-transparent bg-[linear-gradient(to_right,theme(colors.stone.400),theme(colors.zinc.100),theme(colors.zinc.400),theme(colors.zinc.100),theme(colors.stone.400))] bg-[length:200%_auto] animate-gradient">
+              RELEVANT COURSES
+            </p>
+          </h1>
+        </div>
+        <div className="font-mono font-extrabold mt-7 md:mt-20 2xl:mt-44">
+          <Courses></Courses>
         </div>
         <div className="flex justify-center">
           <KeyboardArrowDownIcon

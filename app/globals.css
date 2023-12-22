@@ -2,6 +2,8 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -19,6 +21,14 @@
 
 .special-font {
   font-family: "Space Mono", monospace;
+}
+
+.slick-dots li.slick-active button:before {
+  color: White !important;
+}
+
+.slick-dots button:before {
+  color: rgb(208, 208, 208) !important;
 }
 
 .snap-y {
