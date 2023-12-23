@@ -110,8 +110,11 @@ const Courses: React.FC = () => {
     <div className={isMobile ? "flex justify-center" : ""}>
       {isMobile ? (
         <Slider {...settings} className="w-[90vw]">
-          {coursesData.map((course) => (
-            <Card className="bg-gradient-to-r from-neutral-800 via-neutral-700 to-neutral-800 rounded-lg">
+          {coursesData.map((course, index) => (
+            <Card
+              key={index}
+              className="bg-gradient-to-r from-neutral-800 via-neutral-700 to-neutral-800 rounded-lg"
+            >
               <CardContent>
                 <Typography
                   variant="h5"
@@ -138,93 +141,45 @@ const Courses: React.FC = () => {
       ) : (
         <>
           <div className="flex justify-around">
-            <Slider
-              {...settings}
-              className="w-1/4 transform hover:scale-105 transition-transform duration-300 ease-in-out"
-            >
-              {coursesData.slice(0, 4).map((course) => (
-                <Card className="bg-gradient-to-r from-neutral-800 via-neutral-700 to-neutral-800 rounded-xl">
-                  <CardContent>
-                    <Typography
-                      variant="h5"
-                      className="text-center mb-1 font-bold text-white"
-                    >
-                      {course.number}
-                    </Typography>
-                    <Typography
-                      variant="h6"
-                      className="text-center mb-4 font-bold text-white"
-                    >
-                      {course.title}
-                    </Typography>
-                    <Typography
-                      color="text.secondary"
-                      className="text-center text-white"
-                    >
-                      {course.description}
-                    </Typography>
-                  </CardContent>
-                </Card>
-              ))}
-            </Slider>
-            <Slider
-              {...settings}
-              className="w-1/4 transform hover:scale-105 transition-transform duration-300 ease-in-out"
-            >
-              {coursesData.slice(4, 8).map((course) => (
-                <Card className="bg-gradient-to-r from-neutral-800 via-neutral-700 to-neutral-800 rounded-xl">
-                  <CardContent>
-                    <Typography
-                      variant="h5"
-                      className="text-center mb-1 font-bold text-white"
-                    >
-                      {course.number}
-                    </Typography>
-                    <Typography
-                      variant="h6"
-                      className="text-center mb-4 font-bold text-white"
-                    >
-                      {course.title}
-                    </Typography>
-                    <Typography
-                      color="text.secondary"
-                      className="text-center text-white"
-                    >
-                      {course.description}
-                    </Typography>
-                  </CardContent>
-                </Card>
-              ))}
-            </Slider>
-            <Slider
-              {...settings}
-              className="w-1/4 transform hover:scale-105 transition-transform duration-300 ease-in-out"
-            >
-              {coursesData.slice(8).map((course) => (
-                <Card className="bg-gradient-to-r from-neutral-800 via-neutral-700 to-neutral-800 rounded-xl">
-                  <CardContent>
-                    <Typography
-                      variant="h5"
-                      className="text-center mb-1 font-bold text-white"
-                    >
-                      {course.number}
-                    </Typography>
-                    <Typography
-                      variant="h6"
-                      className="text-center mb-4 font-bold text-white"
-                    >
-                      {course.title}
-                    </Typography>
-                    <Typography
-                      color="text.secondary"
-                      className="text-center text-white"
-                    >
-                      {course.description}
-                    </Typography>
-                  </CardContent>
-                </Card>
-              ))}
-            </Slider>
+            {Array.from({ length: 3 }, (_, i) => i * 4).map(
+              (startIndex, groupIndex) => (
+                <Slider
+                  key={groupIndex}
+                  {...settings}
+                  className="w-1/4 transform hover:scale-105 transition-transform duration-300 ease-in-out"
+                >
+                  {coursesData
+                    .slice(startIndex, startIndex + 4)
+                    .map((course, index) => (
+                      <Card
+                        key={startIndex + index}
+                        className="bg-gradient-to-r from-neutral-800 via-neutral-700 to-neutral-800 rounded-xl"
+                      >
+                        <CardContent>
+                          <Typography
+                            variant="h5"
+                            className="text-center mb-1 font-bold text-white"
+                          >
+                            {course.number}
+                          </Typography>
+                          <Typography
+                            variant="h6"
+                            className="text-center mb-4 font-bold text-white"
+                          >
+                            {course.title}
+                          </Typography>
+                          <Typography
+                            color="text.secondary"
+                            className="text-center text-white"
+                          >
+                            {course.description}
+                          </Typography>
+                        </CardContent>
+                      </Card>
+                    ))}
+                </Slider>
+              )
+            )}
           </div>
         </>
       )}
