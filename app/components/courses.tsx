@@ -20,6 +20,12 @@ const Courses: React.FC = () => {
 
   const coursesData: Course[] = [
     {
+      number: "COMP 126",
+      title: "Practical Web Design and Development",
+      description:
+        "Made the most use out of vanilla HTML and CSS while learning about mobile first responsive design and accessibility. Covered the DOM, UI Design, Color Choice, Typography, Bootstrap, and more.",
+    },
+    {
       number: "COMP 210",
       title: "Data Structures and Analysis",
       description:
@@ -30,12 +36,6 @@ const Courses: React.FC = () => {
       title: "Introduction to Scientific Programming",
       description:
         "Covered topics such as data types, control flow, functions, and object-oriented programming. Learned to use Python libraries such as NumPy, and Matplotlib, Pandas, and more. Projects included analyzing CSV files to deconstruct DNA molecules and analyzing large data sets to find trends.",
-    },
-    {
-      number: "COMP 126",
-      title: "Practical Web Design and Development",
-      description:
-        "Made the most use out of vanilla HTML and CSS while learning about mobile first responsive design and accessibility. Covered the DOM, UI Design, Color Choice, Typography, Bootstrap, and more.",
     },
     {
       number: "COMP 211",
@@ -110,7 +110,7 @@ const Courses: React.FC = () => {
     <div className={isMobile ? "flex justify-center" : ""}>
       {isMobile ? (
         <Slider {...settings} className="w-[90vw]">
-          {coursesData.map((course, index) => (
+          {coursesData.slice(1).map((course, index) => (
             <Card
               key={index}
               className="bg-gradient-to-r from-neutral-800 via-neutral-700 to-neutral-800 rounded-lg"
