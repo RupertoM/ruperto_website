@@ -109,9 +109,9 @@ const Courses: React.FC = () => {
   return (
     <div className={isMobile ? "flex justify-center" : ""}>
       {isMobile ? (
-        <Slider {...settings} className="w-4/5">
+        <Slider {...settings} className="w-[90vw]">
           {coursesData.map((course) => (
-            <Card className="bg-gradient-to-r from-neutral-800 via-neutral-700 to-neutral-800 rounded-xl">
+            <Card className="bg-gradient-to-r from-neutral-800 via-neutral-700 to-neutral-800 rounded-lg">
               <CardContent>
                 <Typography
                   variant="h5"
