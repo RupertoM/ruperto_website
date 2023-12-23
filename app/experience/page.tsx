@@ -212,12 +212,12 @@ const Experience: React.FC = () => {
             </p>
           </h1>
         </div>
-        <div className="font-mono font-extrabold mt-7 md:mt-20 2xl:mt-44">
+        <div className="font-mono font-extrabold mt-7 md:mt-10 2xl:mt-44">
           <Courses></Courses>
         </div>
         <div className="flex justify-center">
           <KeyboardArrowDownIcon
-            className="mt-4 md:mt-16"
+            className="mt-4 md:mt-10"
             style={{ fontSize: "4rem", color: "white" }}
           />
         </div>
