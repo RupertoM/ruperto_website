@@ -22,15 +22,15 @@
 }
 
 .special-font {
-  font-family: "Space Mono", monospace;
+  font-family: "Space Mono", monospace !important;
 }
 
 .roboto-font {
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", sans-serif !important;
 }
 
 .poppins-font {
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif !important;
 }
 
 .slick-dots li.slick-active button:before {

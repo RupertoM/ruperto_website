@@ -212,7 +212,7 @@ const Experience: React.FC = () => {
             </p>
           </h1>
         </div>
-        <div className="font-mono font-extrabold mt-7 md:mt-16 2xl:mt-44">
+        <div className="mt-7 md:mt-16 2xl:mt-44">
           <Courses></Courses>
         </div>
         {/* <div className="flex justify-center">
