@@ -45,7 +45,7 @@ const Courses: React.FC = () => {
     },
     {
       number: "COMP 301",
-      title: "Structure and Organize Your Own Code",
+      title: "Structure and Organize Code",
       description:
         "Covered topics such as version control, testing, and documentation. Learned how to use Git and GitHub to manage projects. Learned how to use JUnit to test code. Learned about different design patterns such as the singleton pattern, the factory pattern, the observer pattern, the MVC, and more. Learned how to efficiently write, structure, and organize Java code to meet industry standards.",
     },
@@ -118,20 +118,17 @@ const Courses: React.FC = () => {
               <CardContent>
                 <Typography
                   variant="h5"
-                  className="text-center mb-1 font-bold text-white"
+                  className="text-center mb-1 font-bold text-white poppins-font"
                 >
                   {course.number}
                 </Typography>
                 <Typography
                   variant="h6"
-                  className="text-center mb-3 font-bold text-white"
+                  className="text-center mb-3 font-bold text-white special-font"
                 >
                   {course.title}
                 </Typography>
-                <Typography
-                  color="text.secondary"
-                  className="text-center text-white"
-                >
+                <Typography className="text-center text-white roboto-font">
                   {course.description}
                 </Typography>
               </CardContent>
@@ -158,20 +155,14 @@ const Courses: React.FC = () => {
                         <CardContent>
                           <Typography
                             variant="h5"
-                            className="text-center mb-1 font-bold text-white"
+                            className="text-center mb-1 font-bold text-white poppins-font"
                           >
                             {course.number}
                           </Typography>
-                          <Typography
-                            variant="h6"
-                            className="text-center mb-4 font-bold text-white"
-                          >
+                          <Typography className="text-center text-lg mb-5 font-bold text-white special-font">
                             {course.title}
                           </Typography>
-                          <Typography
-                            color="text.secondary"
-                            className="text-center text-white"
-                          >
+                          <Typography className="text-center text-white roboto-font">
                             {course.description}
                           </Typography>
                         </CardContent>
