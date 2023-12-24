@@ -118,13 +118,13 @@ const Courses: React.FC = () => {
               <CardContent>
                 <Typography
                   variant="h5"
-                  className="text-center mb-1 font-bold text-white poppins-font"
+                  className="text-center mb-1 !font-bold text-white poppins-font"
                 >
                   {course.number}
                 </Typography>
                 <Typography
                   variant="h6"
-                  className="text-center mb-3 font-bold text-white special-font"
+                  className="text-center !mb-3 !font-bold text-white special-font"
                 >
                   {course.title}
                 </Typography>
@@ -155,11 +155,11 @@ const Courses: React.FC = () => {
                         <CardContent>
                           <Typography
                             variant="h5"
-                            className="text-center mb-1 font-bold text-white poppins-font"
+                            className="text-center mb-1 !font-bold text-white poppins-font"
                           >
                             {course.number}
                           </Typography>
-                          <Typography className="text-center text-lg mb-5 font-bold text-white special-font">
+                          <Typography className="text-center !text-lg !mb-5 !font-bold text-white special-font">
                             {course.title}
                           </Typography>
                           <Typography className="text-center text-white roboto-font">
