@@ -25,29 +25,47 @@ const WorkCards: React.FC = () => {
           </CardContent>
         </Card>
       ) : (
-        <div className="flex justify-around mt-20">
-          <Card className="w-2/5 bg-gradient-to-b from-neutral-800 from-5% via-neutral-600 to-neutral-800 to-90% rounded-xl">
+        <div className="flex justify-around mt-12">
+          {/* <Card className="w-2/5 bg-gradient-to-b from-neutral-800 from-5% via-neutral-600 to-neutral-800 to-90% rounded-xl"> */}
+          <Card className="w-2/5 bg-gradient-to-b from-neutral-400 via-white to-neutral-400 rounded-xl">
             <CardContent>
-              <Typography className="!font-bold text-2xl poppins-font text-white">
+              <Typography className="!font-bold text-xl special-font text-black text-center">
                 Publicis Sapient
               </Typography>
-              <Typography color="textSecondary" className="text-white">
-                This is a simple card for other views.
+              <Typography className="text-black !font-bold text-base poppins-font text-center mt-2">
+                Digital Business Transformation And Consulting
+              </Typography>
+              <div className="mt-3 flex">
+                <Typography className="text-black w-1/2 text-center !font-bold special-font text-sm">
+                  June 2023 - August 2023
+                </Typography>
+                <Typography className="text-black w-1/2 text-center !font-bold special-font text-sm">
+                  Atlanta, Georgia
+                </Typography>
+              </div>
+              <Typography className="text-black text-center mt-2 !font-bold special-font text-sm">
+                Software Engineering Intern
               </Typography>
             </CardContent>
           </Card>
           <Card className="w-2/5 bg-gradient-to-b from-neutral-400 via-white to-neutral-400 rounded-xl">
             <CardContent>
-              <div className="flex items-center justify-center">
-                <Typography className="!font-bold w-2/3 text-2xl poppins-font text-black  text-center">
-                  Publicis Sapient
+              <Typography className="!font-bold text-xl special-font text-black text-center">
+                Empowr Volleyball
+              </Typography>
+              <Typography className="text-black !font-bold text-base poppins-font text-center mt-2">
+                Men's Youth Beach and Indoor Volleyball
+              </Typography>
+              <div className="mt-3 flex">
+                <Typography className="text-black w-1/2 text-center !font-bold special-font text-sm">
+                  November 2023 - Present
                 </Typography>
-                <Typography className="text-black !font-bold text-lg poppins-font text-center">
-                  Digital Business Transformation And Consulting
+                <Typography className="text-black w-1/2 text-center !font-bold special-font text-sm">
+                  Cary, North Carolina
                 </Typography>
               </div>
-              <Typography className="text-black">
-                This is a simple card for other views.
+              <Typography className="text-black text-center mt-2 !font-bold special-font text-sm">
+                18s South Head Coach
               </Typography>
             </CardContent>
           </Card>
