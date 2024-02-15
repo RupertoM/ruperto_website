@@ -49,15 +49,15 @@ const WorkCards: React.FC = () => {
               <Typography className="text-black text-justify mt-6 !font-bold special-font text-sm mr-2 ml-2">
                 As a software engineering intern, I was responsible for
                 developing and maintaining both the front-end and back-end of
-                the client's website. Using technologies such as React,
+                the client&apos;s website. Using technologies such as React,
                 JavaScript, Java, and Spring Boot, I worked with a team of
                 developers to create a responsive and user-friendly ad marketing
                 platform with AI integration. I also collaborated with the
-                design team to implement the client's vision. I was responsible
-                for writing clean, maintainable, and efficient code while also
-                ensuring the successful deployment of the web application. This
-                involved taking care of the CI/CD pipeline and working with
-                Docker and Kubernetes Engine.
+                design team to implement the client&apos;s vision. I was
+                responsible for writing clean, maintainable, and efficient code
+                while also ensuring the successful deployment of the web
+                application. This involved taking care of the CI/CD pipeline and
+                working with Docker and Kubernetes Engine.
               </Typography>
             </CardContent>
           </Card>
@@ -67,7 +67,7 @@ const WorkCards: React.FC = () => {
                 Empowr Volleyball
               </Typography>
               <Typography className="text-black !font-bold text-base poppins-font text-center mt-2">
-                Men's Youth Beach and Indoor Volleyball
+                Men&apos;s Youth Beach and Indoor Volleyball
               </Typography>
               <div className="mt-3 flex">
                 <Typography className="text-black w-1/2 text-center !font-bold special-font text-sm">
