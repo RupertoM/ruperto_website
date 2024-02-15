@@ -218,7 +218,7 @@ const Experience: React.FC = () => {
         </div>
         <div className="flex justify-center">
           <KeyboardArrowDownIcon
-            className="mt-4 md:mt-10"
+            className="mt-4 md:mt-8"
             style={{ fontSize: "4rem", color: "white" }}
           />
         </div>
