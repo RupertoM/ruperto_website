@@ -15,15 +15,15 @@ const WorkCards: React.FC = () => {
     <>
       {isMobile ? (
         <div className="mt-4 flex justify-center">
-          <Card className="w-5/6 bg-gradient-to-tl from-neutral-400 via-white to-neutral-400 rounded-xl">
+          <Card className="w-[90%] bg-gradient-to-tl from-neutral-400 via-white to-neutral-400 rounded-xl">
             <CardContent>
               <Typography className="!font-bold !text-xl special-font text-black text-center">
                 Publicis Sapient
               </Typography>
-              <Typography className="text-black text-center !mt-2 !font-bold special-font !text-sm">
+              <Typography className="text-black text-center !mt-2 !font-bold poppins-font !text-sm">
                 Software Engineering Intern
               </Typography>
-              <Typography className="text-black text-justify !mt-6 !font-bold special-font !text-xs !mr-2 !ml-2">
+              <Typography className="text-black text-left !mt-6 !font-bold poppins-font !text-xs !mr-2 !ml-2">
                 As a software engineering intern, I was responsible for
                 developing and maintaining both the front-end and back-end of
                 the client&rsquo;s website. Using technologies such as React,
