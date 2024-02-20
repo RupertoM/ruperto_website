@@ -14,16 +14,31 @@ const WorkCards: React.FC = () => {
   return (
     <>
       {isMobile ? (
-        <Card>
-          <CardContent>
-            <Typography variant="h5" component="h2">
-              Mobile View
-            </Typography>
-            <Typography color="textSecondary">
-              This is a simple card for mobile view.
-            </Typography>
-          </CardContent>
-        </Card>
+        <div className="mt-4 flex justify-center">
+          <Card className="w-5/6 bg-gradient-to-tl from-neutral-400 via-white to-neutral-400 rounded-xl">
+            <CardContent>
+              <Typography className="!font-bold !text-xl special-font text-black text-center">
+                Publicis Sapient
+              </Typography>
+              <Typography className="text-black text-center !mt-2 !font-bold special-font !text-sm">
+                Software Engineering Intern
+              </Typography>
+              <Typography className="text-black text-justify !mt-6 !font-bold special-font !text-xs !mr-2 !ml-2">
+                As a software engineering intern, I was responsible for
+                developing and maintaining both the front-end and back-end of
+                the client&rsquo;s website. Using technologies such as React,
+                JavaScript, Java, and Spring Boot, I worked with a team of
+                developers to create a responsive and user-friendly ad marketing
+                platform with AI integration. I also collaborated with the
+                design team to implement the client&rsquo;s vision. I was
+                responsible for writing clean, maintainable, and efficient code
+                while also ensuring the successful deployment of the web
+                application. This involved taking care of the CI/CD pipeline and
+                working with Docker and Kubernetes Engine.
+              </Typography>
+            </CardContent>
+          </Card>
+        </div>
       ) : (
         <div className="flex justify-around mt-12">
           {/* <Card className="w-2/5 bg-gradient-to-b from-neutral-800 from-5% via-neutral-600 to-neutral-800 to-90% rounded-xl"> */}
