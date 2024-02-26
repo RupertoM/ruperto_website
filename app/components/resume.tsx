@@ -6,7 +6,7 @@ import CircularProgress from "@mui/material/CircularProgress";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 
 const ResumePDF: React.FC = () => {
-  const pdfUrl: string = "/Ruperto's Resume.pdf";
+  const pdfUrl: string = "/Ruperto Martinez Resume.pdf";
   const [isMobile, setIsMobile] = useState(false);
   const [downloadState, setDownloadState] = useState<
     "idle" | "downloading" | "done"
@@ -31,7 +31,7 @@ const ResumePDF: React.FC = () => {
     setTimeout(() => {
       const link = document.createElement("a");
       link.href = pdfUrl;
-      link.download = "Rupertos_Resume.pdf";
+      link.download = "Ruperto_Martinez_Resume.pdf";
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
