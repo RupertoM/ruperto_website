@@ -12,7 +12,7 @@ const TypingText: React.FC<TypingTextProps> = () => {
     const defaultStrings = [
       "Ruperto Martinez.",
       "a Full Stack Developer with expertise in innovative solutions.",
-      "a Student at the University of North Carolina deeply immersed in Computer Science.",
+      "a student at the University of North Carolina deeply immersed in Computer Science.",
       "a tech enthusiast constantly pushing the boundaries of knowledge and always aspiring to learn.",
       "passionate about my faith, technology, volleyball, and those around me.",
       "analytical, collborative, innovative, and motivated, looking to make a difference in my community.",
