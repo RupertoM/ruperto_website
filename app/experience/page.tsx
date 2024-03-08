@@ -63,6 +63,12 @@ const Experience: React.FC = () => {
       isContain: true,
     },
     {
+      title: "AmazonWS",
+      imgSrc: "/aws.png",
+      altText: "AWS Logo",
+      isContain: true,
+    },
+    {
       title: "Docker",
       imgSrc: "/Docker.png",
       altText: "Docker Logo",
@@ -93,7 +99,7 @@ const Experience: React.FC = () => {
       imgSrc: "/GitHub-Actions.png",
       altText: "GitHub Actions Logo",
     },
-    { title: "CLI", imgSrc: "/CLI.svg", altText: "CLI Logo" },
+    { title: "Linux", imgSrc: "/linux.png", altText: "Linux Logo" },
   ];
 
   const controls = useAnimation();
