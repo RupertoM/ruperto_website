@@ -219,7 +219,7 @@ const Experience: React.FC = () => {
             </p>
           </h1>
         </div>
-        <div>
+        <div className="mt-7 md:mt-16 2xl:mt-44">
           <WorkCards />
         </div>
         <div className="flex justify-center">
