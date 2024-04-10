@@ -219,12 +219,12 @@ const Experience: React.FC = () => {
             </p>
           </h1>
         </div>
-        <div className="mt-7 md:mt-16 2xl:mt-44">
+        <div className="mt-7 md:mt-12 2xl:mt-44">
           <WorkCards />
         </div>
         <div className="flex justify-center">
           <KeyboardArrowDownIcon
-            className="mt-4 md:mt-6"
+            className="mt-2 md:mt-16"
             style={{ fontSize: "4rem", color: "white" }}
           />
         </div>
