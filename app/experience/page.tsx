@@ -167,11 +167,8 @@ const Experience: React.FC = () => {
             ))}
           </div>
         </div>
-        <div className="flex justify-center">
-          <KeyboardArrowDownIcon
-            className="mt-24 md:mt-16"
-            style={{ fontSize: "4rem", color: "white" }}
-          />
+        <div className="flex justify-center mt-24 md:mt-16 2xl:mt-44">
+          <KeyboardArrowDownIcon style={{ fontSize: "4rem", color: "white" }} />
         </div>
       </div>
 
@@ -203,11 +200,8 @@ const Experience: React.FC = () => {
             ))}
           </div>
         </div>
-        <div className="flex justify-center">
-          <KeyboardArrowDownIcon
-            className="mt-4 md:mt-16"
-            style={{ fontSize: "4rem", color: "white" }}
-          />
+        <div className="flex justify-center mt-4 md:mt-16 2xl:mt-44">
+          <KeyboardArrowDownIcon style={{ fontSize: "4rem", color: "white" }} />
         </div>
       </div>
 
@@ -219,12 +213,12 @@ const Experience: React.FC = () => {
             </p>
           </h1>
         </div>
-        <div>
+        <div className="mt-7 md:mt-12 2xl:mt-44">
           <WorkCards />
         </div>
-        <div className="flex justify-center">
+        <div className="flex justify-center mt-4 md:mt-8 2xl:mt-44">
           <KeyboardArrowDownIcon
-            className="mt-4 md:mt-6"
+            className=""
             style={{ fontSize: "4rem", color: "white" }}
           />
         </div>
