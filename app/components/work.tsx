@@ -41,7 +41,6 @@ const WorkCards: React.FC = () => {
         </div>
       ) : (
         <div className="flex justify-around mt-12">
-          {/* <Card className="w-2/5 bg-gradient-to-b from-neutral-800 from-5% via-neutral-600 to-neutral-800 to-90% rounded-xl"> */}
           <Card className="w-2/5 bg-gradient-to-tr from-zinc-800 via-neutral-700 to-zinc-900 rounded-xl transform hover:scale-105 transition-transform duration-300 ease-in-out">
             <CardContent>
               <Typography className="!font-bold !text-xl special-font text-zinc-200 text-center">
