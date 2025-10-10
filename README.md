@@ -17,4 +17,4 @@ This portfolio website is a personal project that serves as a comprehensive disp
 
 ## 📫 Contact
 
-Ruperto Martinez - [LinkedIn](https://www.linkedin.com/in/ram-unc-cs/) - ponce11@email.unc.edu
+Ruperto Martinez - [LinkedIn](https://www.linkedin.com/in/ram-unc-cs/) - rupmartinez11@gmail.com
