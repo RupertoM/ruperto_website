@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 import GetAppIcon from "@mui/icons-material/GetApp";
 import CircularProgress from "@mui/material/CircularProgress";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
@@ -54,10 +55,11 @@ const ResumePDF: React.FC = () => {
       >
         {isMobile ? (
           <>
-            <img
-              src={"/Resume.png"}
+            <Image
+              src="/Resume.png"
               alt="Resume"
-              className="w-full h-full object-fill border-0.375rem"
+              fill
+              className="object-fill border-0.375rem"
             />
             {downloadState === "idle" && (
               <div className="absolute bottom-0 right-0 text-sky-500 p-2 rounded cursor-pointer">

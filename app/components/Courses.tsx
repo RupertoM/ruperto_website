@@ -115,7 +115,7 @@ const Courses: React.FC = () => {
           {coursesData.slice(1).map((course, index) => (
             <Card
               key={index}
-              className="bg-gradient-to-r from-neutral-800 via-neutral-700 to-neutral-800 rounded-lg"
+              className="!bg-gradient-to-r !from-neutral-800 !via-neutral-700 !to-neutral-800 rounded-lg"
             >
               <CardContent>
                 <Typography
@@ -152,7 +152,7 @@ const Courses: React.FC = () => {
                     .map((course, index) => (
                       <Card
                         key={startIndex + index}
-                        className="bg-gradient-to-r from-neutral-800 via-neutral-700 to-neutral-800 rounded-xl"
+                        className="!bg-gradient-to-r !from-neutral-800 !via-neutral-700 !to-neutral-800 rounded-xl"
                       >
                         <CardContent>
                           <Typography

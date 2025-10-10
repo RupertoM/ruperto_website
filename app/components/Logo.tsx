@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
+import Image from "next/image";
 
 interface LogoProps {
   title: string;
@@ -33,9 +34,11 @@ const Logo: React.FC<LogoProps> = ({
   return isMobile ? (
     <div className="text-center ml-2 mr-2">
       <h5 className="text-lg text-white mb-2 md:mb-4">{title}</h5>
-      <img
+      <Image
         src={imgSrc}
         alt={altText}
+        width={80}
+        height={80}
         className={`w-6 h-6 md:w-20 md:h-20 mb-5 md:mb-10 md:transition-transform md:transform-gpu md:hover:scale-125 ${
           isContain ? "object-contain" : "object-cover"
         } mx-auto`}
@@ -44,9 +47,11 @@ const Logo: React.FC<LogoProps> = ({
   ) : (
     <div className="text-center ml-5 mr-5">
       <h5 className="text-xl text-white mb-2 md:mb-4">{title}</h5>
-      <img
+      <Image
         src={imgSrc}
         alt={altText}
+        width={80}
+        height={80}
         className={`w-10 h-10 md:w-20 md:h-20 mb-5 md:mb-10 md:transition-transform md:transform-gpu md:hover:scale-125 ${
           isContain ? "object-contain" : "object-cover"
         } mx-auto`}

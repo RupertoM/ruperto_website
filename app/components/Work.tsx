@@ -15,7 +15,7 @@ const WorkCards: React.FC = () => {
     <>
       {isMobile ? (
         <div className="mt-4 flex justify-center">
-          <Card className="w-[90%] bg-gradient-to-tr from-zinc-800 via-neutral-700 to-zinc-900 rounded-xl">
+          <Card className="w-[90%] !bg-gradient-to-tr !from-zinc-800 !via-neutral-700 !to-zinc-900 rounded-xl">
             <CardContent>
               <Typography className="!font-bold !text-xl special-font text-zinc-200 text-center">
                 Publicis Sapient
@@ -41,7 +41,7 @@ const WorkCards: React.FC = () => {
         </div>
       ) : (
         <div className="flex justify-around mt-12">
-          <Card className="w-2/5 bg-gradient-to-tr from-zinc-800 via-neutral-700 to-zinc-900 rounded-xl transform hover:scale-105 transition-transform duration-300 ease-in-out">
+          <Card className="w-2/5 !bg-gradient-to-tr !from-zinc-800 !via-neutral-700 !to-zinc-900 rounded-xl transform hover:scale-105 transition-transform duration-300 ease-in-out">
             <CardContent>
               <Typography className="!font-bold !text-xl special-font text-zinc-200 text-center">
                 Publicis Sapient
@@ -75,7 +75,7 @@ const WorkCards: React.FC = () => {
               </Typography>
             </CardContent>
           </Card>
-          <Card className="w-2/5 bg-gradient-to-tr from-zinc-800 via-neutral-700 to-zinc-900 rounded-xl transform hover:scale-105 transition-transform duration-300 ease-in-out">
+          <Card className="w-2/5 !bg-gradient-to-tr !from-zinc-800 !via-neutral-700 !to-zinc-900 rounded-xl transform hover:scale-105 transition-transform duration-300 ease-in-out">
             <CardContent>
               <Typography className="!font-bold !text-xl special-font text-zinc-200 text-center">
                 Empowr Volleyball

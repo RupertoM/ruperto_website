@@ -1,9 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -20,15 +17,15 @@
 }
 
 .special-font {
-  font-family: "Space Mono", monospace !important;
+  font-family: var(--font-space-mono), monospace !important;
 }
 
 .roboto-font {
-  font-family: "Roboto", sans-serif !important;
+  font-family: var(--font-roboto), sans-serif !important;
 }
 
 .poppins-font {
-  font-family: "Poppins", sans-serif !important;
+  font-family: var(--font-poppins), sans-serif !important;
 }
 
 .slick-dots li.slick-active button:before {

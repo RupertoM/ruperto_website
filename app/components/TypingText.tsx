@@ -3,9 +3,7 @@
 import React, { useEffect, useRef } from "react";
 import Typed from "typed.js";
 
-interface TypingTextProps {}
-
-const TypingText: React.FC<TypingTextProps> = () => {
+const TypingText: React.FC = () => {
   const typedRef = useRef<HTMLHeadingElement>(null);
 
   useEffect(() => {
@@ -15,7 +13,7 @@ const TypingText: React.FC<TypingTextProps> = () => {
       "a student at the University of North Carolina deeply immersed in Computer Science.",
       "a tech enthusiast constantly pushing the boundaries of knowledge and always aspiring to learn.",
       "passionate about my faith, technology, volleyball, and those around me.",
-      "analytical, collborative, innovative, and motivated, looking to make a difference in my community.",
+      "analytical, collaborative, innovative, and motivated, looking to make a difference in my community.",
     ];
 
     const options = {

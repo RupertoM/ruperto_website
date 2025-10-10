@@ -3,6 +3,15 @@
 import React, { useEffect, useState } from "react";
 import { Button } from "@mui/material";
 
+interface VerseResponse {
+  verse?: {
+    details?: {
+      text?: string;
+      reference?: string;
+    };
+  };
+}
+
 export const VerseOfTheDay: React.FC = () => {
   const [verseData, setVerseData] = useState({
     text: "",
@@ -21,7 +30,7 @@ export const VerseOfTheDay: React.FC = () => {
         "https://beta.ourmanna.com/api/v1/get?format=json&order=random",
         options
       );
-      const data = await response.json();
+      const data = await response.json() as VerseResponse;
 
       const verseDetails = data?.verse?.details;
 

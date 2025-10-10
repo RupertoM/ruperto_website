@@ -1,7 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
-import { VerseOfTheDay } from "../components/getVerse";
+import Image from "next/image";
+import { VerseOfTheDay } from "../components/GetVerse";
 import Slideshow from "../components/Slideshow";
 import { Button, Dialog, DialogContent, Icon } from "@mui/material";
 import {
@@ -12,11 +13,6 @@ import {
   SmartToy,
   Extension,
 } from "@mui/icons-material";
-
-<link
-  rel="stylesheet"
-  href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap"
-/>;
 
 export default function Interests() {
   const [openDialog, setOpenDialog] = useState<boolean>(false);
@@ -63,10 +59,11 @@ export default function Interests() {
           </h1>
           <div className="h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
             <div className="absolute inset-0">
-              <img
+              <Image
                 className="h-full w-full rounded-xl object-cover shadow-xl shadow-black/40"
                 src="/cross.png"
-                alt=""
+                alt="Faith"
+                fill
               />
             </div>
             <div className="absolute inset-0 h-full w-full rounded-xl bg-black/80 px-12 text-center text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden]">
@@ -82,10 +79,11 @@ export default function Interests() {
           </h1>
           <div className="h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
             <div className="absolute inset-0">
-              <img
+              <Image
                 className="h-full w-full rounded-xl object-cover shadow-xl shadow-black/40"
                 src="/volleyball.png"
-                alt=""
+                alt="Volleyball"
+                fill
               />
             </div>
             <div className="absolute inset-0 h-full w-full rounded-xl bg-black/80 px-6 text-center text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden]">
@@ -141,10 +139,11 @@ export default function Interests() {
           </h1>
           <div className="h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
             <div className="absolute inset-0">
-              <img
+              <Image
                 className="h-full w-full rounded-xl object-cover shadow-xl shadow-black/40"
                 src="/tech.png"
-                alt=""
+                alt="Technology"
+                fill
               />
             </div>
             <div className="absolute inset-0 h-full w-full rounded-xl bg-black/80 px-6 text-center text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden]">
@@ -182,10 +181,11 @@ export default function Interests() {
           </h1>
           <div className="h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
             <div className="absolute inset-0">
-              <img
+              <Image
                 className="h-full w-full rounded-xl object-cover shadow-xl shadow-black/40"
                 src="/travel.png"
-                alt=""
+                alt="Adventures"
+                fill
               />
             </div>
             <div className="absolute inset-0 h-full w-full rounded-xl bg-black/80 px-6 md:px-10 text-center text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden]">
@@ -222,20 +222,35 @@ export default function Interests() {
           </div>
         </div>
       </div>
-      <Dialog open={openDialog} onClose={handleToggleDialog}>
+      <Dialog
+        open={openDialog}
+        onClose={handleToggleDialog}
+        maxWidth={false}
+        sx={{
+          "& .MuiDialog-paper": {
+            overflow: "hidden",
+            margin: 0,
+          },
+        }}
+      >
         <DialogContent
           sx={{
             width: "30vw",
             height: "75vh",
             backgroundColor: "black",
             overflow: "hidden",
+            padding: 0,
+            "&::-webkit-scrollbar": {
+              display: "none",
+            },
+            scrollbarWidth: "none",
             "@media (max-width: 1024px)": {
               width: "70vw",
               height: "40vh",
             },
           }}
         >
-          <Slideshow images={currentImages} />
+          {currentImages.length > 0 && <Slideshow images={currentImages} />}
         </DialogContent>
       </Dialog>
     </div>

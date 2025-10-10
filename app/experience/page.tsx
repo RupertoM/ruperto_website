@@ -1,11 +1,11 @@
 "use client";
 
 import React from "react";
-import Logo from "../components/logo";
-import { motion, useAnimation } from "framer-motion";
+import Logo from "../components/Logo";
+import { motion, useAnimationControls } from "framer-motion";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-import Courses from "../components/courses";
-import WorkCards from "../components/work";
+import Courses from "../components/Courses";
+import WorkCards from "../components/Work";
 
 const Experience: React.FC = () => {
   const languages = [
@@ -102,15 +102,15 @@ const Experience: React.FC = () => {
     { title: "Linux", imgSrc: "/linux.png", altText: "Linux Logo" },
   ];
 
-  const controls = useAnimation();
-
-  const startAnimations = async () => {
-    await controls.start("visible");
-  };
+  const controls = useAnimationControls();
 
   React.useEffect(() => {
+    const startAnimations = async () => {
+      await controls.start("visible");
+    };
+
     startAnimations();
-  }, []);
+  }, [controls]);
 
   return (
     <div className="snap-y snap-mandatory h-screen overflow-auto overflow-x-hidden">

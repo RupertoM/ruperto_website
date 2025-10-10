@@ -1,20 +1,21 @@
 "use client";
 
 import React from "react";
-import { motion, useAnimation } from "framer-motion";
-import Particles from "./components/particles";
+import Image from "next/image";
+import { motion, useAnimationControls } from "framer-motion";
+import Particles from "./components/Particles";
 import TypingText from "./components/TypingText";
 
 export default function Home() {
-  const controls = useAnimation();
-
-  const startAnimations = async () => {
-    await controls.start("visible");
-  };
+  const controls = useAnimationControls();
 
   React.useEffect(() => {
+    const startAnimations = async () => {
+      await controls.start("visible");
+    };
+
     startAnimations();
-  }, []);
+  }, [controls]);
 
   return (
     <div className="flex flex-col items-center justify-center w-screen h-screen overflow-hidden bg-gradient-to-bl from-black via-slate-500/25 to-black">
@@ -41,9 +42,11 @@ export default function Home() {
         transition={{ duration: 4, delay: 3 }}
         className="mb-8"
       >
-        <img
+        <Image
           src="/personal_photo.png"
           alt="Profile Picture"
+          width={160}
+          height={160}
           className="rounded-full w-40 h-40 object-cover"
         />
       </motion.div>
